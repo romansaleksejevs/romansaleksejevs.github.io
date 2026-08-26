@@ -160,3 +160,49 @@
   .certificate-card{flex-basis:100%}
   .certificate-prev{left:8px}.certificate-next{right:8px}
 }
+
+/* GitHub Pages carousel fix — fixed thumbnail size + clipping */
+.certificate-carousel{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  padding:0 2px;
+}
+.certificate-gallery{
+  display:flex !important;
+  gap:18px !important;
+  overflow:visible !important;
+  width:100%;
+  transition:transform .45s ease;
+  scroll-behavior:auto !important;
+  will-change:transform;
+}
+.certificate-card{
+  flex:0 0 calc((100% - 36px)/3) !important;
+  width:calc((100% - 36px)/3) !important;
+  max-width:calc((100% - 36px)/3) !important;
+  min-width:0 !important;
+}
+.certificate-card img{
+  width:100% !important;
+  height:220px !important;
+  max-height:220px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:#f7f9fb !important;
+}
+.certificate-prev{left:10px !important}
+.certificate-next{right:10px !important}
+.certificate-nav{top:42% !important}
+@media(max-width:900px){
+  .certificate-card{
+    flex-basis:calc((100% - 18px)/2) !important;
+    width:calc((100% - 18px)/2) !important;
+    max-width:calc((100% - 18px)/2) !important;
+  }
+  .certificate-card img{height:210px !important;max-height:210px !important}
+}
+@media(max-width:620px){
+  .certificate-card{flex-basis:100% !important;width:100% !important;max-width:100% !important}
+  .certificate-card img{height:230px !important;max-height:230px !important}
+}

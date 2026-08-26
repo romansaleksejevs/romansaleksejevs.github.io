@@ -52,15 +52,18 @@ document.addEventListener("keydown", event => {
 });
 
 
-// Certificate carousel
+
+// Certificate carousel — robust transform version for GitHub Pages
 (() => {
-  const gallery = document.querySelector(".certificate-gallery");
+  const track = document.querySelector(".certificate-gallery");
+  const viewport = document.querySelector(".certificate-carousel");
   const prev = document.querySelector(".certificate-prev");
   const next = document.querySelector(".certificate-next");
   const dotsWrap = document.querySelector(".certificate-dots");
-  if (!gallery || !prev || !next || !dotsWrap) return;
 
-  const cards = [...gallery.querySelectorAll(".certificate-card")];
+  if (!track || !viewport || !prev || !next || !dotsWrap) return;
+
+  const cards = Array.from(track.querySelectorAll(".certificate-card"));
   let page = 0;
 
   const visibleCount = () => {
@@ -71,38 +74,65 @@ document.addEventListener("keydown", event => {
 
   const pageCount = () => Math.ceil(cards.length / visibleCount());
 
-  const buildDots = () => {
+  function rebuildDots() {
     dotsWrap.innerHTML = "";
     for (let i = 0; i < pageCount(); i++) {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "certificate-dot";
       dot.setAttribute("aria-label", `Show certificate page ${i + 1}`);
-      dot.addEventListener("click", () => { page = i; update(); });
+      dot.addEventListener("click", () => {
+        page = i;
+        render();
+      });
       dotsWrap.appendChild(dot);
     }
-  };
+  }
 
-  const update = () => {
+  function render() {
     const count = visibleCount();
-    const maxPage = Math.max(0, pageCount() - 1);
-    page = Math.min(page, maxPage);
-    const first = cards[page * count];
-    if (first) gallery.scrollTo({left:first.offsetLeft - gallery.offsetLeft, behavior:"smooth"});
+    const pages = pageCount();
+    page = Math.max(0, Math.min(page, pages - 1));
+
+    const gap = 18;
+    const viewportWidth = viewport.clientWidth;
+    const cardWidth = (viewportWidth - gap * (count - 1)) / count;
+    const offset = page * count * (cardWidth + gap);
+
+    track.style.transform = `translate3d(${-offset}px,0,0)`;
+
     prev.disabled = page === 0;
-    next.disabled = page === maxPage;
-    [...dotsWrap.children].forEach((d, i) => d.classList.toggle("active", i === page));
-  };
+    next.disabled = page >= pages - 1;
 
-  prev.addEventListener("click", () => { if (page > 0) { page--; update(); } });
-  next.addEventListener("click", () => { if (page < pageCount() - 1) { page++; update(); } });
+    Array.from(dotsWrap.children).forEach((dot, i) => {
+      dot.classList.toggle("active", i === page);
+    });
+  }
 
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { page = 0; buildDots(); update(); }, 120);
+  prev.addEventListener("click", () => {
+    if (page > 0) {
+      page -= 1;
+      render();
+    }
   });
 
-  buildDots();
-  update();
+  next.addEventListener("click", () => {
+    if (page < pageCount() - 1) {
+      page += 1;
+      render();
+    }
+  });
+
+  let timer;
+  window.addEventListener("resize", () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      page = 0;
+      rebuildDots();
+      render();
+    }, 120);
+  });
+
+  rebuildDots();
+  requestAnimationFrame(render);
 })();
