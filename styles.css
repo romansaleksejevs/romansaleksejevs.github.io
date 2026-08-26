@@ -206,3 +206,25 @@
   .certificate-card{flex-basis:100% !important;width:100% !important;max-width:100% !important}
   .certificate-card img{height:230px !important;max-height:230px !important}
 }
+
+
+/* PDF certificates added to gallery */
+.certificate-pdf{text-decoration:none;color:inherit}
+.pdf-preview{display:flex;width:100%;height:220px;align-items:center;justify-content:center;flex-direction:column;gap:8px;background:#f7f9fb;border-bottom:1px solid #e8edf2;text-align:center;padding:24px}
+.pdf-preview strong{font-size:26px;letter-spacing:-.02em;color:#18202b}
+.pdf-preview small{font:500 12px "JetBrains Mono",monospace;color:#168c80;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:900px){.pdf-preview{height:210px}}
+@media(max-width:620px){.pdf-preview{height:230px}}
+
+.certificate-pdf{display:block;text-decoration:none;color:inherit}
+
+/* Smaller About me heading */
+.about-title {
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+  line-height: 1.05;
+}
+
+/* Keep the top-left brand in the HTML, but hide it visually */
+.site-header .brand {
+  visibility: hidden;
+}

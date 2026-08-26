@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
   <div class="noise"></div>
@@ -19,7 +19,7 @@
       <span>Romans Aleksejevs</span>
     </a>
     <nav class="nav">
-      <a href="#about">About</a>
+      <a href="#top">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -33,13 +33,12 @@
     <section class="hero section">
       <div class="hero-copy reveal">
         <div class="eyebrow">Senior Network & Security Engineer</div>
-        <h1>Building secure, resilient networks for <span>enterprise and data center environments.</span></h1>
+        <h1 class="about-title">About me</h1>
         <p class="hero-lead">
-          Senior Network &amp; Security Engineer with 18+ years of IT experience, with the most recent 5+ years of my professional career spent working in Sweden.
-          Experienced in international and enterprise environments, with strong hands-on expertise in networking, cybersecurity, data center infrastructure, and cloud technologies.
-          Skilled in Cisco, F5, Fortinet, Check Point, Infoblox, and Microsoft Azure.
-          I hold a Master’s Degree in IT and industry certifications including Cisco CCNP, Microsoft, and LPIC.
-          Focused on building secure and resilient infrastructure, solving complex technical challenges, modernization, and automation.
+          My name is Romans Aleksejevs, and I am a 37-year-old Senior Network &amp; Security Engineer based in Lund, Sweden. I was born in Riga, Latvia, where I grew up and spent most of my life before moving to Sweden. I have been living and working in Sweden for more than 5 years.<br><br>
+I hold a Master’s Degree in Information Technology and have more than 18 years of professional experience in the IT industry. Throughout my career, I have worked with enterprise networks, mobile network operators, ISPs, data center infrastructure, cybersecurity, cloud technologies, and network automation. I also hold multiple industry certifications, including Cisco, Microsoft Azure, and LPIC certifications.<br><br>
+I have extensive hands-on experience with network infrastructure and security technologies, including routers, switches, load balancers, firewalls, VPNs, and DDoS protection solutions. I have also worked with network automation and management platforms such as Cisco ISE, Cisco ACI, Tufin, and AlgoSec, as well as private and public cloud environments. For network automation projects, I have used Ansible, Python, GraphQL, and Terraform to automate infrastructure configuration, deployment, and operational tasks.<br><br>
+Currently, my main professional focus is Network Automation and Artificial Intelligence, exploring how automation and AI can improve network operations, reliability, efficiency, and security. I am continuously developing my technical skills and am open to new professional challenges and opportunities.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#experience">View Experience</a>
@@ -54,29 +53,7 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="section-heading reveal">
-        <div class="eyebrow">01 / About</div>
-        <h2>Infrastructure depth. Security mindset. Operational ownership.</h2>
-      </div>
-      <div class="about-grid">
-        <p class="large-copy reveal">
-          I am a Senior Network and Security Engineer with extensive experience designing,
-          operating, upgrading and troubleshooting complex enterprise and data center infrastructure.
-        </p>
-        <div class="about-copy reveal">
-          <p>
-            My background spans service provider, mobile operator and enterprise environments,
-            giving me a practical understanding of both large-scale network operations and business-critical infrastructure.
-          </p>
-          <p>
-            I work across routing and switching, network security, load balancing, VPN, DNS/IPAM,
-            data center platforms and cloud networking. I enjoy solving difficult infrastructure problems,
-            reducing operational risk and making environments easier to manage through standardization and automation.
-          </p>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="skills" class="section">
       <div class="section-heading reveal">
@@ -125,7 +102,7 @@
 
     <section id="experience" class="section">
       <div class="section-heading reveal">
-        <div class="eyebrow">03 / Experience</div>
+        <div class="eyebrow">02 / Experience</div>
         <h2>Senior engineering across critical infrastructure.</h2>
       </div>
 
@@ -263,7 +240,7 @@
 
     <section id="certifications" class="section split-section">
       <div class="section-heading reveal">
-        <div class="eyebrow">05 / Credentials</div>
+        <div class="eyebrow">04 / University Education</div>
         <h2>Certifications & education.</h2>
       </div>
       <div class="credentials-grid">
@@ -284,7 +261,7 @@
           </ul>
         </div>
         <div class="credential-panel reveal">
-          <h3>Education</h3>
+          <h3>University Education</h3>
           <ul class="clean-list">
             <li><strong>Master's Degree in Computer Systems Design</strong><br><a href="https://www.rtu.lv/en/university/structure-and-administration/faculties/faculty-of-computer-science-information-technology-and-energy" target="_blank" rel="noopener noreferrer">Riga Technical University</a></li>
             <li><strong>Bachelor's Degree in Software Engineering</strong><br><a href="https://tsi.lv/study_programmes/computer-sciences-master/" target="_blank" rel="noopener noreferrer">Transport and Telecommunication Institute (TSI)</a></li>
@@ -297,76 +274,105 @@
 
     <section id="certificate-gallery" class="section certificate-gallery-section">
       <div class="section-heading reveal">
-        <div class="eyebrow">06 / Certificate Gallery</div>
+        <div class="eyebrow">05 / Certificate Gallery</div>
         
       </div>
 
       <div class="certificate-carousel">
         <button class="certificate-nav certificate-prev" type="button" aria-label="Previous certificates">‹</button>
         <div class="certificate-gallery">
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/google-cybersecurity.jpg" aria-label="Open Google Cybersecurity certificate">
-          <img src="certificates/google-cybersecurity.jpg" alt="Google Cybersecurity Professional Certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/google-cybersecurity.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Google Cybersecurity">
+          <img src="certificates/google-cybersecurity.jpg" alt="Google Cybersecurity">
           <span class="certificate-caption">
             <strong>Google Cybersecurity</strong>
             <small>Professional Certificate · 2025</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/fortigate-security.jpg" aria-label="Open FortiGate Security certificate">
-          <img src="certificates/fortigate-security.jpg" alt="FortiGate Security certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/fortigate-security.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open FortiGate Security">
+          <img src="certificates/fortigate-security.jpg" alt="FortiGate Security">
           <span class="certificate-caption">
             <strong>FortiGate Security</strong>
-            <small>Fortinet Training Institute · 2023</small>
+            <small>Fortinet Training · 2023</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/fortigate-infrastructure.jpg" aria-label="Open FortiGate Infrastructure certificate">
-          <img src="certificates/fortigate-infrastructure.jpg" alt="FortiGate Infrastructure certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/fortigate-infrastructure.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open FortiGate Infrastructure">
+          <img src="certificates/fortigate-infrastructure.jpg" alt="FortiGate Infrastructure">
           <span class="certificate-caption">
             <strong>FortiGate Infrastructure</strong>
-            <small>Fortinet Training Institute · 2023</small>
+            <small>Fortinet Training · 2023</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/ripe-database-expert.jpg" aria-label="Open RIPE Database Expert certificate">
-          <img src="certificates/ripe-database-expert.jpg" alt="RIPE Database Expert certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/cisco-ccnp.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Cisco CCNP">
+          <img src="certificates/cisco-ccnp.jpg" alt="Cisco CCNP certificate">
+          <span class="certificate-caption"><strong>Cisco CCNP</strong><small>Cisco Certified Network Professional · 2013</small></span>
+        </a>
+
+        <a class="certificate-card reveal certificate-pdf" href="certificates/cisco-ccna.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Cisco CCNA">
+          <img src="certificates/cisco-ccna.jpg" alt="Cisco CCNA certificate">
+          <span class="certificate-caption"><strong>Cisco CCNA</strong><small>Cisco Certified Network Associate · 2012</small></span>
+        </a>
+
+        <a class="certificate-card reveal certificate-pdf" href="certificates/cisco-ccent.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Cisco CCENT">
+          <img src="certificates/cisco-ccent.jpg" alt="Cisco CCENT certificate">
+          <span class="certificate-caption"><strong>Cisco CCENT</strong><small>Cisco Certified Entry Networking Technician · 2012</small></span>
+        </a>
+
+        <a class="certificate-card reveal certificate-pdf" href="certificates/lpic-1.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open LPIC-1">
+          <img src="certificates/lpic-1.jpg" alt="LPIC-1 certificate">
+          <span class="certificate-caption"><strong>LPIC-1</strong><small>Linux Professional Institute · 2014</small></span>
+        </a>
+
+        <a class="certificate-card reveal certificate-pdf" href="certificates/ripe-database-expert.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open RIPE Database Expert">
+          <img src="certificates/ripe-database-expert.jpg" alt="RIPE Database Expert">
           <span class="certificate-caption">
             <strong>RIPE Database Expert</strong>
             <small>RIPE NCC Academy · 2015</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/lpic-1.jpg" aria-label="Open Linux Professional Institute LPIC-1 certificate">
-          <img src="certificates/lpic-1.jpg" alt="Linux Professional Institute LPIC-1 certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/orckit.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Orckit CM-4000 Training">
+          <img src="certificates/orckit.jpg?v=7" alt="Orckit CM-4000 Training">
           <span class="certificate-caption">
-            <strong>Linux Professional Institute LPIC-1</strong>
-            <small>Linux Professional Institute · 2014</small>
+            <strong>Orckit CM-4000 Training</strong>
+            <small>Level 1 & 2 · 2010</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/cisco-ccent.jpg" aria-label="Open Cisco CCENT certificate">
-          <img src="certificates/cisco-ccent.jpg" alt="Cisco CCENT certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/microsoft-certified-professional.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Microsoft Certified Professional">
+          <img src="certificates/microsoft-certified-professional.jpg?v=7" alt="Microsoft Certified Professional">
           <span class="certificate-caption">
-            <strong>Cisco CCENT</strong>
-            <small>Cisco Certified Entry Networking Technician</small>
+            <strong>Microsoft Certified Professional</strong>
+            <small>Microsoft</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/cisco-ccna.jpg" aria-label="Open Cisco CCNA certificate">
-          <img src="certificates/cisco-ccna.jpg" alt="Cisco CCNA certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/lte-training.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open LTE & IP Transport Networks">
+          <img src="certificates/lte-training.jpg" alt="LTE & IP Transport Networks">
           <span class="certificate-caption">
-            <strong>Cisco CCNA</strong>
-            <small>Cisco Certified Network Associate</small>
+            <strong>LTE & IP Transport Networks</strong>
+            <small>Tallinn · 2010</small>
           </span>
-        </button>
+        </a>
 
-        <button class="certificate-card reveal" type="button" data-certificate="certificates/cisco-ccnp.jpg" aria-label="Open Cisco CCNP certificate">
-          <img src="certificates/cisco-ccnp.jpg" alt="Cisco CCNP certificate">
+        <a class="certificate-card reveal certificate-pdf" href="certificates/ericsson-oms-1410.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Ericsson OMS 1410">
+          <img src="certificates/ericsson-oms-1410.jpg" alt="Ericsson OMS 1410">
           <span class="certificate-caption">
-            <strong>Cisco CCNP</strong>
-            <small>Cisco Certified Network Professional</small>
+            <strong>Ericsson OMS 1410</strong>
+            <small>Ericsson · 2011</small>
           </span>
-        </button>
+        </a>
+
+        <a class="certificate-card reveal certificate-pdf" href="certificates/tele2-extra-mile-award-2020.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Tele2 Extra Mile Award">
+          <img src="certificates/tele2-extra-mile-award-2020.jpg" alt="Tele2 Extra Mile Award">
+          <span class="certificate-caption">
+            <strong>Tele2 Extra Mile Award</strong>
+            <small>Tele2 · 2020</small>
+          </span>
+        </a>
+
       </div>
         <button class="certificate-nav certificate-next" type="button" aria-label="Next certificates">›</button>
       </div>
@@ -381,8 +387,8 @@
     <section id="contact" class="section contact-section">
       <div class="contact-card reveal">
         <div>
-          <div class="eyebrow">07 / Contact</div>
-          <h2>Looking for a senior engineer who can own complex infrastructure?</h2>
+          <div class="eyebrow">06 / Contact</div>
+          <h2>Contact to me</h2>
           <p>
             I am interested in senior roles across Network Engineering, Network Security,
             Cloud Networking, Infrastructure and Automation.
@@ -402,6 +408,6 @@
     <span>Network · Security · Cloud · Automation</span>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
