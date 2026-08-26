@@ -49,3 +49,114 @@
         padding-bottom: 48px;
     }
 }
+
+/* Consistent paragraph spacing */
+.about-copy p,
+.time-body p,
+.project p,
+.card p,
+.contact-card p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.about-copy p:last-child,
+.time-body p:last-child,
+.project p:last-child,
+.card p:last-child,
+.contact-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Education external links */
+.clean-list a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.clean-list a:hover {
+    color: #168c80;
+}
+
+/* Certificate image gallery */
+.certificate-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.certificate-card{appearance:none;text-align:left;padding:0;border:1px solid #e4e9ef;border-radius:16px;background:#fff;overflow:hidden;cursor:pointer;box-shadow:0 8px 24px rgba(31,41,55,.045);transition:transform .2s ease,box-shadow .2s ease}
+.certificate-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(31,41,55,.10)}
+.certificate-card img{display:block;width:100%;height:250px;object-fit:cover;object-position:center;border-bottom:1px solid #e8edf2;background:#f8fafc}
+.certificate-caption{display:flex;flex-direction:column;gap:4px;padding:16px 18px;color:#18202b}
+.certificate-caption strong{font-size:15px}
+.certificate-caption small{color:#667085;font-size:12px}
+.certificate-lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(10,13,18,.82);backdrop-filter:blur(8px)}
+.certificate-lightbox.open{display:flex}
+.certificate-lightbox img{display:block;max-width:min(1400px,94vw);max-height:90vh;object-fit:contain;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.35);background:#fff}
+.certificate-lightbox-close{position:fixed;top:20px;right:24px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#18202b;font-size:30px;line-height:1;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+@media(max-width:900px){.certificate-gallery{grid-template-columns:1fr 1fr}.certificate-card img{height:230px}}
+@media(max-width:620px){.certificate-gallery{grid-template-columns:1fr}.certificate-card img{height:auto;aspect-ratio:4/3}.certificate-lightbox{padding:18px}}
+
+/* Reduce whitespace between credentials list and certificate gallery */
+#certifications.section {
+    padding-bottom: 40px;
+}
+#certificate-gallery.section {
+    padding-top: 28px;
+}
+
+@media(max-width:900px) {
+    #certifications.section { padding-bottom: 32px; }
+    #certificate-gallery.section { padding-top: 22px; }
+}
+
+@media(max-width:620px) {
+    #certifications.section { padding-bottom: 24px; }
+    #certificate-gallery.section { padding-top: 18px; }
+}
+
+/* Certificate gallery: keep 3 certificates per row */
+.certificate-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Certificate carousel — 3 visible certificates on desktop */
+.certificate-carousel{position:relative}
+.certificate-gallery{
+  display:flex !important;
+  grid-template-columns:none !important;
+  gap:18px;
+  overflow:hidden;
+  scroll-behavior:smooth;
+}
+.certificate-card{
+  flex:0 0 calc((100% - 36px)/3);
+  min-width:0;
+}
+.certificate-nav{
+  position:absolute;
+  z-index:8;
+  top:50%;
+  transform:translateY(-50%);
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid #dfe5ec;
+  background:rgba(255,255,255,.96);
+  color:#18202b;
+  font-size:31px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 10px 28px rgba(31,41,55,.14);
+  transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;
+}
+.certificate-nav:hover{transform:translateY(-50%) scale(1.05);box-shadow:0 14px 34px rgba(31,41,55,.2)}
+.certificate-prev{left:-23px}
+.certificate-next{right:-23px}
+.certificate-nav:disabled{opacity:.28;cursor:default}
+.certificate-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.certificate-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#cfd6df;cursor:pointer}
+.certificate-dot.active{background:#18202b}
+@media(max-width:900px){
+  .certificate-card{flex-basis:calc((100% - 18px)/2)}
+  .certificate-prev{left:-12px}.certificate-next{right:-12px}
+}
+@media(max-width:620px){
+  .certificate-card{flex-basis:100%}
+  .certificate-prev{left:8px}.certificate-next{right:8px}
+}
