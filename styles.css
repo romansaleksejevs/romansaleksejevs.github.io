@@ -228,3 +228,50 @@
 .site-header .brand {
   visibility: hidden;
 }
+
+
+/* Enterprise Networking detail modal */
+.enterprise-network-card{cursor:pointer;position:relative}
+.enterprise-network-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
+.card-more{display:inline-block;margin-top:18px;color:#168c80;font:600 11px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+.network-modal{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(10,13,18,.72);backdrop-filter:blur(9px)}
+.network-modal.open{display:flex}
+.network-modal-dialog{position:relative;width:min(1120px,96vw);max-height:90vh;overflow:auto;background:#fff;border:1px solid #dfe5ec;border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.28);padding:42px}
+.network-modal-close{position:sticky;float:right;top:0;z-index:3;width:44px;height:44px;border:1px solid #dde4eb;border-radius:50%;background:#fff;color:#18202b;font-size:29px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(31,41,55,.12)}
+.network-modal-header{padding-right:62px;margin-bottom:30px}
+.network-modal-header h2{margin:7px 0 10px;font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-.04em;color:#18202b}
+.network-modal-header p{margin:0;max-width:780px;color:#667085;font-size:16px}
+.network-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.network-detail-section{border:1px solid #e4e9ef;background:#fbfcfd;border-radius:18px;padding:28px}
+.network-detail-label{color:#168c80;font:600 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+.network-detail-section h3{margin:12px 0 14px;font-size:24px;line-height:1.2;color:#18202b}
+.network-detail-section p{margin:0 0 18px;color:#667085}
+.network-detail-section ul{margin:0;padding-left:20px}
+.network-detail-section li{margin:0 0 13px;color:#667085}
+.network-detail-section li:last-child{margin-bottom:0}
+.network-detail-section strong{color:#26313e}
+@media(max-width:900px){.network-modal-grid{grid-template-columns:1fr}.network-modal-dialog{padding:32px}.network-modal{padding:18px}}
+@media(max-width:620px){.network-modal{padding:10px}.network-modal-dialog{width:100%;max-height:94vh;padding:24px 18px;border-radius:18px}.network-modal-header{padding-right:48px}.network-detail-section{padding:22px}.network-modal-header h2{font-size:34px}}
+
+/* Enterprise Networking popup — single Office Network section uses full modal width */
+.network-modal-grid {
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+.network-detail-section {
+  width: 100%;
+}
+
+
+/* Data Center card and detailed modal */
+.data-center-card{cursor:pointer;position:relative}
+.data-center-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
+#data-center-modal .network-modal-dialog{width:min(1240px,96vw)}
+#data-center-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}
+#data-center-modal .aci-detail-section{background:#f8fbfb;border-color:#d7ebe8}
+
+/* Network Security technical details card + full-width popup */
+.network-security-card{cursor:pointer;position:relative}
+.network-security-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
+#network-security-modal .network-modal-dialog{width:min(1240px,96vw)}
+#network-security-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}

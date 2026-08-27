@@ -136,3 +136,114 @@ document.addEventListener("keydown", event => {
   rebuildDots();
   requestAnimationFrame(render);
 })();
+
+
+// Enterprise Networking technical details modal
+(() => {
+  const card = document.querySelector(".enterprise-network-card");
+  const modal = document.getElementById("enterprise-network-modal");
+  const closeBtn = modal?.querySelector(".network-modal-close");
+  if (!card || !modal || !closeBtn) return;
+
+  let lastFocusedElement = null;
+
+  function openNetworkModal() {
+    lastFocusedElement = document.activeElement;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function closeNetworkModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    lastFocusedElement?.focus();
+  }
+
+  card.addEventListener("click", openNetworkModal);
+  card.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openNetworkModal();
+    }
+  });
+
+  closeBtn.addEventListener("click", closeNetworkModal);
+  modal.addEventListener("click", event => {
+    if (event.target === modal) closeNetworkModal();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+      closeNetworkModal();
+    }
+  });
+})();
+
+
+// Enterprise Data Center Network technical details modal
+(() => {
+  const card = document.querySelector(".data-center-card");
+  const modal = document.getElementById("data-center-modal");
+  const closeBtn = modal?.querySelector(".data-center-modal-close");
+  if (!card || !modal || !closeBtn) return;
+  let lastFocusedElement = null;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  card.addEventListener("click", openModal);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(); }});
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+
+// Network Security technical details modal
+(() => {
+  const card = document.querySelector(".network-security-card");
+  const modal = document.getElementById("network-security-modal");
+  const closeBtn = modal?.querySelector(".network-security-modal-close");
+  if (!card || !modal || !closeBtn) return;
+  let lastFocusedElement = null;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  card.addEventListener("click", openModal);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(); }});
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+
+
+// Load Balancing technical details modal
+(() => {
+  const card = document.querySelector(".load-balancing-card");
+  const modal = document.getElementById("load-balancing-modal");
+  const closeBtn = modal?.querySelector(".load-balancing-modal-close");
+  if (!card || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  card.addEventListener("click", openModal);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(); } });
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+
+
+// Cloud Networking technical details modal
+(() => {
+  const card = document.querySelector(".cloud-networking-card");
+  const modal = document.getElementById("cloud-networking-modal");
+  const closeBtn = modal?.querySelector(".cloud-networking-modal-close");
+  if (!card || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  card.addEventListener("click", openModal);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(); } });
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
