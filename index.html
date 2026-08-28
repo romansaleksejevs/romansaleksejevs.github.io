@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=32" />
+  <link rel="stylesheet" href="styles.css?v=33" />
 </head>
 <body>
   <div class="noise"></div>
@@ -89,10 +89,11 @@ Currently, my main professional focus is Network Automation and Artificial Intel
           <p>Private and public cloud networking across VMware NSX-T, Microsoft Azure and AWS, including virtual network architecture, segmentation, routing, security, hybrid connectivity, load balancing and cloud network operations.</p>
           <span class="card-more">View technical details →</span>
         </article>
-        <article class="card reveal">
+        <article class="card reveal automation-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="automation-modal">
           <span class="card-index">06</span>
-          <h3>Automation & Operations</h3>
-          <p>Linux, scripting, infrastructure standardization, repeatable upgrades, configuration workflows and operational improvement.</p>
+          <h3>Network / Infrastructure Automation</h3>
+          <p>API-driven network and infrastructure automation using Ansible, Python, Netmiko, NAPALM, Git-based workflows, NetBox source-of-truth data and AI-assisted engineering.</p>
+          <span class="card-more">View technical details →</span>
         </article>
       </div>
 
@@ -315,6 +316,66 @@ Currently, my main professional focus is Network Automation and Artificial Intel
               <li><strong>Cloud network design:</strong> High availability across availability zones, resilient routing, CIDR planning, overlapping-address avoidance, centralized egress, shared-services architectures and separation of production / non-production environments.</li>
               <li><strong>Security &amp; governance:</strong> Least-privilege network access, private-by-default architecture, logging / monitoring concepts, policy standardization and integration with enterprise security controls.</li>
               <li><strong>Hybrid cloud:</strong> End-to-end design and troubleshooting across on-premises data centers, private cloud, Azure and AWS, including routing, VPN, DNS, firewall, NAT, load-balancing and application connectivity dependencies.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="network-modal" id="automation-modal" aria-hidden="true">
+      <div class="network-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="automation-title">
+        <button class="network-modal-close automation-modal-close" type="button" aria-label="Close Network and Infrastructure Automation details">×</button>
+        <div class="network-modal-header">
+          <span class="card-index">06 / CORE EXPERTISE</span>
+          <h2 id="automation-title">Network / Infrastructure Automation</h2>
+        </div>
+
+        <div class="network-modal-grid">
+          <section class="network-detail-section">
+            <h3>APIs, Python &amp; Network Automation</h3>
+            <p>Automation of network and infrastructure configuration, validation, deployment and operational workflows using API-driven methods, Python libraries and vendor-independent automation frameworks. Focus on repeatable execution, structured data, idempotency, validation and reduction of manual configuration risk.</p>
+            <ul>
+              <li><strong>REST APIs:</strong> Integration with controller, cloud and network-management platforms using HTTP methods, REST endpoints, JSON payloads, authentication tokens, pagination, status-code validation and structured API responses.</li>
+              <li><strong>GraphQL APIs:</strong> Query-driven retrieval of structured infrastructure data, selective field requests, schema-based operations and use of GraphQL for inventory, topology and source-of-truth integrations where supported.</li>
+              <li><strong>Python automation:</strong> Development of reusable scripts for configuration generation, data collection, validation, device inventory processing, API interaction, parsing, reporting and operational task automation.</li>
+              <li><strong>Netmiko:</strong> SSH-based automation of multi-vendor network devices, command execution, configuration deployment, privilege-mode handling, show-command collection and scripted operational workflows.</li>
+              <li><strong>NAPALM:</strong> Vendor-neutral network automation using common getters, candidate configuration workflows, configuration merge / replace operations, diffs, commit / discard logic and state validation.</li>
+              <li><strong>Ansible:</strong> Agentless infrastructure automation using inventories, variables, YAML playbooks, roles, templates, conditionals, loops, handlers, network collections and vendor modules for repeatable configuration and operational tasks.</li>
+              <li><strong>Jinja2 &amp; structured configuration:</strong> Template-driven generation of standardized network configurations using reusable variables and source data, reducing configuration drift and improving consistency across devices.</li>
+              <li><strong>Data formats:</strong> Practical use of YAML, JSON and CSV for inventories, variables, API payloads, configuration input and machine-readable automation output.</li>
+              <li><strong>Validation &amp; error handling:</strong> Pre-change checks, post-change verification, exception handling, return-code validation, configuration diffs, rollback logic and logging to make automation predictable and operationally safe.</li>
+              <li><strong>Use cases:</strong> Configuration deployment, backups, software-upgrade preparation, interface and routing validation, firewall / VPN checks, inventory collection, compliance checks, bulk changes, documentation generation and recurring operational tasks.</li>
+            </ul>
+          </section>
+
+          <section class="network-detail-section">
+            <h3>Source / Version Control, CI/CD &amp; Network Source of Truth</h3>
+            <p>Infrastructure-as-code and NetDevOps practices using version-controlled configuration, structured network data and automated workflows to provide traceability, peer review, repeatability and a reliable source of operational intent.</p>
+            <ul>
+              <li><strong>Git:</strong> Distributed version control for automation code, templates and infrastructure configuration, including repositories, branches, commits, diffs, merges, tags, rollback history and change traceability.</li>
+              <li><strong>GitHub / GitLab:</strong> Repository hosting, branch-based workflows, pull / merge requests, code review, issue tracking, protected branches, access control and collaboration around infrastructure code.</li>
+              <li><strong>CI/CD concepts:</strong> Automated linting, syntax validation, testing, configuration rendering, approval gates and controlled deployment pipelines for network and infrastructure changes.</li>
+              <li><strong>NetBox:</strong> Network Source of Truth for devices, sites, racks, interfaces, IP addresses, prefixes, VLANs, VRFs, circuits and other infrastructure metadata used by automation workflows.</li>
+              <li><strong>Source-of-truth integration:</strong> Retrieval of authoritative inventory and addressing data through NetBox APIs and use of that data as dynamic input for Ansible, Python and configuration-generation workflows.</li>
+              <li><strong>Configuration standardization:</strong> Reusable templates, naming standards, common variables, device roles and data models to reduce one-off configurations and improve consistency across network platforms.</li>
+              <li><strong>Infrastructure as Code:</strong> Declarative and repeatable infrastructure management using Terraform concepts, version-controlled definitions, change planning and controlled application of infrastructure state.</li>
+              <li><strong>Change governance:</strong> Peer-reviewed changes, commit history, reproducible deployments, documented rollback points and separation between proposed, approved and deployed configuration.</li>
+            </ul>
+          </section>
+
+          <section class="network-detail-section automation-ai-section">
+            <h3>AI-Assisted Network Engineering — ChatGPT &amp; Claude Code</h3>
+            <p>Use of generative AI as an engineering assistant for network automation, troubleshooting, documentation and code development, with human review and technical validation before production changes.</p>
+            <ul>
+              <li><strong>ChatGPT:</strong> Assistance with Python / Ansible development, API examples, regular expressions, configuration templates, troubleshooting logic, migration planning, technical documentation and explanation of network protocols or vendor behavior.</li>
+              <li><strong>Claude Code:</strong> AI-assisted work with local codebases and automation repositories, including code navigation, refactoring, script generation, test creation, debugging, documentation updates and multi-file infrastructure-automation changes.</li>
+              <li><strong>Configuration analysis:</strong> Review of network-device configuration snippets, logs, routing output, firewall policies and operational data to identify inconsistencies, suggest troubleshooting paths and accelerate root-cause analysis.</li>
+              <li><strong>Automation development:</strong> Generation and refinement of Python functions, Ansible playbooks, Jinja2 templates, API integrations, data parsers and validation logic while keeping engineering review in the approval path.</li>
+              <li><strong>Documentation &amp; knowledge workflows:</strong> Transformation of technical notes, CLI output and change information into implementation plans, rollback procedures, operational runbooks and structured documentation.</li>
+              <li><strong>Safety &amp; validation:</strong> AI-generated commands and code are treated as proposed engineering output and validated against vendor documentation, lab / test environments, configuration diffs and change-control procedures before production use.</li>
+              <li><strong>Future direction:</strong> Applying AI to network operations through intelligent log analysis, configuration review, anomaly investigation, knowledge retrieval, automated documentation and assisted remediation workflows integrated with existing automation platforms.</li>
             </ul>
           </section>
         </div>
@@ -623,6 +684,6 @@ Currently, my main professional focus is Network Automation and Artificial Intel
     <span>Network · Security · Cloud · Automation</span>
   </footer>
 
-  <script src="script.js?v=32"></script>
+  <script src="script.js?v=33"></script>
 </body>
 </html>

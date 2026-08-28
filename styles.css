@@ -275,3 +275,10 @@
 .network-security-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
 #network-security-modal .network-modal-dialog{width:min(1240px,96vw)}
 #network-security-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}
+
+/* Network / Infrastructure Automation technical details modal */
+.automation-card{cursor:pointer;position:relative}
+.automation-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
+#automation-modal .network-modal-dialog{width:min(1240px,96vw)}
+#automation-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}
+#automation-modal .automation-ai-section{background:#f8fbfb;border-color:#d7ebe8}

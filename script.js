@@ -247,3 +247,19 @@ document.addEventListener("keydown", event => {
   modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
 })();
+
+// Network / Infrastructure Automation technical details modal
+(() => {
+  const card = document.querySelector(".automation-card");
+  const modal = document.getElementById("automation-modal");
+  const closeBtn = modal?.querySelector(".automation-modal-close");
+  if (!card || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  card.addEventListener("click", openModal);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(); } });
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
