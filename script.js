@@ -73,7 +73,7 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 // Certificate carousel — robust transform version for GitHub Pages
 (() => {
   const track = document.querySelector(".certificate-gallery");
-  const viewport = document.querySelector(".certificate-carousel");
+  const viewport = document.querySelector(".certificate-viewport");
   const prev = document.querySelector(".certificate-prev");
   const next = document.querySelector(".certificate-next");
   const dotsWrap = document.querySelector(".certificate-dots");

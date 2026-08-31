@@ -23,3 +23,10 @@ Files to replace in your existing website:
 - script.js
 
 Keep your existing certificates/ folder, CV PDF, portrait, and other assets.
+
+
+v38
+- Double-checked certificate carousel arrow issue.
+- Added a dedicated .certificate-viewport clipping container so the certificate track is clipped but navigation arrows are not.
+- Right arrow is now a sibling of the viewport and forced above the carousel with z-index 30.
+- Updated CSS/JS cache-busting references from v36 to v38.
