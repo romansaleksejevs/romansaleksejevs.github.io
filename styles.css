@@ -276,13 +276,50 @@
 #network-security-modal .network-modal-dialog{width:min(1240px,96vw)}
 #network-security-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}
 
-/* Network / Infrastructure Automation technical details modal */
-.automation-card{cursor:pointer;position:relative}
-.automation-card:focus-visible{outline:3px solid rgba(22,140,128,.28);outline-offset:4px}
-#automation-modal .network-modal-dialog{width:min(1240px,96vw)}
-#automation-modal .network-modal-grid{display:grid;grid-template-columns:1fr;gap:18px}
-#automation-modal .automation-ai-section{background:#f8fbfb;border-color:#d7ebe8}
 
-/* Keep linked company names visually identical to existing company-name text */
-.time-meta strong a{color:inherit;text-decoration:none;font:inherit}
-.time-meta strong a:hover{color:inherit;text-decoration:none}
+/* Certificate PDF modal — matches the Core Expertise popup size/style */
+.certificate-modal{z-index:130}
+.certificate-modal-dialog{
+  width:min(1120px,96vw);
+  height:min(860px,90vh);
+  max-height:90vh;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  padding:32px;
+}
+.certificate-modal-header{
+  flex:0 0 auto;
+  margin-bottom:18px;
+}
+.certificate-modal-header h2{
+  margin-bottom:0;
+  font-size:clamp(30px,4vw,46px);
+}
+.certificate-modal-viewer{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:hidden;
+  border:1px solid #dfe5ec;
+  border-radius:16px;
+  background:#f7f9fb;
+}
+.certificate-modal-viewer iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:560px;
+  border:0;
+  background:#fff;
+}
+@media(max-width:900px){
+  .certificate-modal-dialog{height:92vh;padding:24px}
+  .certificate-modal-viewer iframe{min-height:520px}
+}
+@media(max-width:620px){
+  .certificate-modal-dialog{width:100%;height:94vh;padding:18px 14px}
+  .certificate-modal-header{margin-bottom:12px}
+  .certificate-modal-header h2{font-size:28px}
+  .certificate-modal-viewer{border-radius:12px}
+  .certificate-modal-viewer iframe{min-height:480px}
+}

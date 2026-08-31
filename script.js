@@ -20,37 +20,57 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 
-// Certificate gallery lightbox
-const certificateLightbox = document.getElementById("certificate-lightbox");
-const certificateLightboxImage = document.getElementById("certificate-lightbox-image");
-const certificateClose = document.querySelector(".certificate-lightbox-close");
+// Certificate gallery modal — same visual style as the technical detail popups
+(() => {
+  const modal = document.getElementById("certificate-lightbox");
+  const frame = document.getElementById("certificate-lightbox-frame");
+  const title = document.getElementById("certificate-lightbox-title");
+  const closeBtn = modal?.querySelector(".certificate-lightbox-close");
+  const cards = document.querySelectorAll(".certificate-pdf");
 
-document.querySelectorAll("[data-certificate]").forEach(card => {
-  card.addEventListener("click", () => {
-    certificateLightboxImage.src = card.dataset.certificate;
-    certificateLightbox.classList.add("open");
-    certificateLightbox.setAttribute("aria-hidden", "false");
+  if (!modal || !frame || !title || !closeBtn || !cards.length) return;
+
+  let lastFocusedElement = null;
+
+  function openCertificateModal(card) {
+    const pdfUrl = card.getAttribute("href");
+    const certificateTitle = card.querySelector(".certificate-caption strong")?.textContent?.trim() || "Certificate";
+    if (!pdfUrl) return;
+
+    lastFocusedElement = document.activeElement;
+    title.textContent = certificateTitle;
+    frame.src = pdfUrl;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
-  });
-});
-
-function closeCertificateLightbox() {
-  certificateLightbox.classList.remove("open");
-  certificateLightbox.setAttribute("aria-hidden", "true");
-  certificateLightboxImage.src = "";
-  document.body.style.overflow = "";
-}
-
-certificateClose?.addEventListener("click", closeCertificateLightbox);
-certificateLightbox?.addEventListener("click", event => {
-  if (event.target === certificateLightbox) closeCertificateLightbox();
-});
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && certificateLightbox?.classList.contains("open")) {
-    closeCertificateLightbox();
+    closeBtn.focus();
   }
-});
 
+  function closeCertificateModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    frame.src = "";
+    document.body.style.overflow = "";
+    lastFocusedElement?.focus();
+  }
+
+  cards.forEach(card => {
+    card.addEventListener("click", event => {
+      event.preventDefault();
+      openCertificateModal(card);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeCertificateModal);
+  modal.addEventListener("click", event => {
+    if (event.target === modal) closeCertificateModal();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+      closeCertificateModal();
+    }
+  });
+})();
 
 
 // Certificate carousel — robust transform version for GitHub Pages
