@@ -24,21 +24,18 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 (() => {
   const modal = document.getElementById("certificate-lightbox");
   const frame = document.getElementById("certificate-lightbox-frame");
-  const title = document.getElementById("certificate-lightbox-title");
   const closeBtn = modal?.querySelector(".certificate-lightbox-close");
   const cards = document.querySelectorAll(".certificate-pdf");
 
-  if (!modal || !frame || !title || !closeBtn || !cards.length) return;
+  if (!modal || !frame || !closeBtn || !cards.length) return;
 
   let lastFocusedElement = null;
 
   function openCertificateModal(card) {
     const pdfUrl = card.getAttribute("href");
-    const certificateTitle = card.querySelector(".certificate-caption strong")?.textContent?.trim() || "Certificate";
     if (!pdfUrl) return;
 
     lastFocusedElement = document.activeElement;
-    title.textContent = certificateTitle;
     frame.src = pdfUrl;
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
