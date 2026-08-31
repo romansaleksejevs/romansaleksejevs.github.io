@@ -1,0 +1,25 @@
+Romans Aleksejevs Portfolio — consolidated changes
+
+Included changes:
+1. Certificate PDFs open inside an on-page modal instead of a new/full browser window.
+2. Certificate modal uses the same visual style/size approach as the technical-detail modals.
+3. Removed the "CERTIFICATE" label from the certificate modal.
+4. Removed the certificate name/title from the modal header.
+5. Reduced and balanced top/bottom whitespace inside the modal.
+6. Close button is absolutely positioned so it does not create extra top spacing.
+7. Certificate carousel and existing portal design remain unchanged.
+8. Certificate order updated to:
+   1) Cisco CCNP
+   2) Cisco CCNA
+   3) Cisco CCENT
+   4) FortiGate Security
+   5) FortiGate Infrastructure
+   6) All remaining certificates in their previous order.
+9. CSS/JS cache-busting version updated to v36.
+
+Files to replace in your existing website:
+- index.html
+- styles.css
+- script.js
+
+Keep your existing certificates/ folder, CV PDF, portrait, and other assets.
