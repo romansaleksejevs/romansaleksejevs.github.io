@@ -313,3 +313,32 @@
   .certificate-modal-viewer{border-radius:12px}
   .certificate-modal-viewer iframe{min-height:480px}
 }
+
+
+/* Certificate popup spacing fix — keep PDF viewer equally spaced from all modal edges */
+.certificate-modal-dialog{
+  position:relative;
+  padding:24px !important;
+}
+.certificate-modal-dialog .certificate-lightbox-close{
+  position:absolute !important;
+  float:none !important;
+  top:34px !important;
+  right:34px !important;
+  z-index:20;
+  margin:0 !important;
+}
+.certificate-modal-viewer{
+  width:100%;
+  height:100%;
+  flex:1 1 auto;
+  margin:0 !important;
+}
+@media(max-width:900px){
+  .certificate-modal-dialog{padding:20px !important;}
+  .certificate-modal-dialog .certificate-lightbox-close{top:30px !important;right:30px !important;}
+}
+@media(max-width:620px){
+  .certificate-modal-dialog{padding:14px !important;}
+  .certificate-modal-dialog .certificate-lightbox-close{top:22px !important;right:22px !important;}
+}
