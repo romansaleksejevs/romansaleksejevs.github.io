@@ -383,5 +383,14 @@
 .tele2-details-link:hover{opacity:.72}
 .tele2-details-link:focus-visible{outline:2px solid rgba(22,140,128,.35);outline-offset:4px;border-radius:2px}
 
-/* Employment dates use regular font weight */
-.time-meta span { font-weight: 400; }
+/* v47: smaller main headings inside popup dialogs */
+.network-modal-header h2 {
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+@media (max-width: 700px) {
+  .network-modal-header h2 { font-size: 24px; }
+}

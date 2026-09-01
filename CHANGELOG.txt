@@ -1,9 +1,5 @@
-Romans Aleksejevs Portfolio — current package
 
-v46
-- Removed visible 01 / 02 / 03 / 04 / 05 / 06 labels from all six boxes in 02 / CORE EXPERTISE.
-- The expertise box content and View technical details links remain unchanged.
-- Preserved Tele2, Evolution and Accenture work-experience updates.
-- Preserved regular (non-bold) employment date styling.
-- Restored styles.css and script.js into the complete downloadable package.
-- Cache-busting updated to v46.
+v47
+- Reduced main heading size inside Core Expertise and Work Experience popup dialogs.
+- Desktop popup headings now scale from 24px to 34px.
+- Mobile popup headings use 24px.
