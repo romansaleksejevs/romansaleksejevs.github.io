@@ -69,3 +69,9 @@ v43
 v44
 - Ensured Tele2 and Evolution employment dates use normal (non-bold) font weight.
 - Updated cache-busting references to v44.
+
+
+v45
+- Added Accenture employment dates: 2012.03 - 2015.08.
+- Date uses the same regular, non-bold style as Tele2 and Evolution.
+- Updated cache-busting references to v45.
