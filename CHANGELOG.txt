@@ -36,3 +36,25 @@ v40
 - Tele2 “More details →” now uses the same visual style as “View technical details →”.
 - Removed bold formatting from Tele2 work-experience descriptive text and modal content.
 - Updated CSS/JS cache-busting references to v40.
+
+
+v41
+- Reworked Evolution work-experience summary into a concise company/team introduction.
+- Added Evolution “More details →” button using the same visual style as Tele2.
+- Added dedicated Evolution work-experience modal.
+- Expanded Evolution details for office networking, data center networking, Cisco/Aruba switching, Cisco Nexus, Palo Alto, Cisco ASA/Firepower, DDoS, IPsec/SSL VPN, monitoring and physical DC support.
+- Added detailed Network Automation section covering Ansible, Python and Git workflows.
+- Added detailed Data Center Network Architecture section.
+- Added Microsoft Azure Networking configuration section.
+- Updated CSS/JS cache-busting references to v41.
+
+v42
+- Changed Accenture job title from “Network Engineering Roles” to “Network Engineer”.
+- Reworked the Accenture summary into company + EMEA Network team introduction.
+- Added Accenture “More details →” button using the same visual style as Tele2 and Evolution.
+- Added a dedicated Accenture work-experience modal.
+- Added detailed EMEA enterprise network operations section.
+- Added routing, switching and high-availability technologies including BGP, OSPF, VLANs, 802.1Q, STP/RSTP/MST, LACP/EtherChannel and HSRP/VRRP.
+- Added firewall, IPsec VPN, ACL, NAT, segmentation, QoS, DHCP and DNS networking topics.
+- Added a classic enterprise networking technologies (2012–2014) section.
+- Updated CSS/JS cache-busting references to v42.
