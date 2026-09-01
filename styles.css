@@ -383,5 +383,5 @@
 .tele2-details-link:hover{opacity:.72}
 .tele2-details-link:focus-visible{outline:2px solid rgba(22,140,128,.35);outline-offset:4px;border-radius:2px}
 
-/* v44: employment dates use regular font weight */
+/* Employment dates use regular font weight */
 .time-meta span { font-weight: 400; }

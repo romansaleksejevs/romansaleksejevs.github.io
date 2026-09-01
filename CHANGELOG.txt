@@ -1,77 +1,9 @@
-Romans Aleksejevs Portfolio — consolidated changes
+Romans Aleksejevs Portfolio — current package
 
-Included changes:
-1. Certificate PDFs open inside an on-page modal instead of a new/full browser window.
-2. Certificate modal uses the same visual style/size approach as the technical-detail modals.
-3. Removed the "CERTIFICATE" label from the certificate modal.
-4. Removed the certificate name/title from the modal header.
-5. Reduced and balanced top/bottom whitespace inside the modal.
-6. Close button is absolutely positioned so it does not create extra top spacing.
-7. Certificate carousel and existing portal design remain unchanged.
-8. Certificate order updated to:
-   1) Cisco CCNP
-   2) Cisco CCNA
-   3) Cisco CCENT
-   4) FortiGate Security
-   5) FortiGate Infrastructure
-   6) All remaining certificates in their previous order.
-9. CSS/JS cache-busting version updated to v36.
-
-Files to replace in your existing website:
-- index.html
-- styles.css
-- script.js
-
-Keep your existing certificates/ folder, CV PDF, portrait, and other assets.
-
-
-v38
-- Double-checked certificate carousel arrow issue.
-- Added a dedicated .certificate-viewport clipping container so the certificate track is clipped but navigation arrows are not.
-- Right arrow is now a sibling of the viewport and forced above the carousel with z-index 30.
-- Updated CSS/JS cache-busting references from v36 to v38.
-
-
-v40
-- Tele2 “More details →” now uses the same visual style as “View technical details →”.
-- Removed bold formatting from Tele2 work-experience descriptive text and modal content.
-- Updated CSS/JS cache-busting references to v40.
-
-
-v41
-- Reworked Evolution work-experience summary into a concise company/team introduction.
-- Added Evolution “More details →” button using the same visual style as Tele2.
-- Added dedicated Evolution work-experience modal.
-- Expanded Evolution details for office networking, data center networking, Cisco/Aruba switching, Cisco Nexus, Palo Alto, Cisco ASA/Firepower, DDoS, IPsec/SSL VPN, monitoring and physical DC support.
-- Added detailed Network Automation section covering Ansible, Python and Git workflows.
-- Added detailed Data Center Network Architecture section.
-- Added Microsoft Azure Networking configuration section.
-- Updated CSS/JS cache-busting references to v41.
-
-v42
-- Changed Accenture job title from “Network Engineering Roles” to “Network Engineer”.
-- Reworked the Accenture summary into company + EMEA Network team introduction.
-- Added Accenture “More details →” button using the same visual style as Tele2 and Evolution.
-- Added a dedicated Accenture work-experience modal.
-- Added detailed EMEA enterprise network operations section.
-- Added routing, switching and high-availability technologies including BGP, OSPF, VLANs, 802.1Q, STP/RSTP/MST, LACP/EtherChannel and HSRP/VRRP.
-- Added firewall, IPsec VPN, ACL, NAT, segmentation, QoS, DHCP and DNS networking topics.
-- Added a classic enterprise networking technologies (2012–2014) section.
-- Updated CSS/JS cache-busting references to v42.
-
-
-v43
-- Added employment dates under Tele2 AB: 2019.01 - 2024.06.
-- Added employment dates under Evolution: 2015.09 - 2018.12.
-- Updated cache-busting references to v43.
-
-
-v44
-- Ensured Tele2 and Evolution employment dates use normal (non-bold) font weight.
-- Updated cache-busting references to v44.
-
-
-v45
-- Added Accenture employment dates: 2012.03 - 2015.08.
-- Date uses the same regular, non-bold style as Tele2 and Evolution.
-- Updated cache-busting references to v45.
+v46
+- Removed visible 01 / 02 / 03 / 04 / 05 / 06 labels from all six boxes in 02 / CORE EXPERTISE.
+- The expertise box content and View technical details links remain unchanged.
+- Preserved Tele2, Evolution and Accenture work-experience updates.
+- Preserved regular (non-bold) employment date styling.
+- Restored styles.css and script.js into the complete downloadable package.
+- Cache-busting updated to v46.
