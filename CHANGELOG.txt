@@ -3,3 +3,10 @@ v47
 - Reduced main heading size inside Core Expertise and Work Experience popup dialogs.
 - Desktop popup headings now scale from 24px to 34px.
 - Mobile popup headings use 24px.
+
+
+v48
+- Fixed Evolution MORE DETAILS button by restoring its modal JavaScript handler.
+- Fixed Accenture MORE DETAILS button by restoring its modal JavaScript handler.
+- Tele2 behavior remains unchanged.
+- Updated cache-busting references to v48.

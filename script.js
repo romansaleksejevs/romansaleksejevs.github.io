@@ -296,3 +296,34 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
 })();
+
+
+// Evolution work experience details modal
+(() => {
+  const button = document.querySelector(".evolution-more-details");
+  const modal = document.getElementById("evolution-modal");
+  const closeBtn = modal?.querySelector(".evolution-modal-close");
+  if (!button || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  button.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+
+// Accenture work experience details modal
+(() => {
+  const button = document.querySelector(".accenture-more-details");
+  const modal = document.getElementById("accenture-modal");
+  const closeBtn = modal?.querySelector(".accenture-modal-close");
+  if (!button || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  button.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
