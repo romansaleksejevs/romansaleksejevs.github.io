@@ -366,3 +366,19 @@
 }
 .certificate-prev{left:10px !important}
 .certificate-next{right:10px !important}
+
+/* Tele2 work-experience details link — matches Core Expertise technical-detail links */
+.tele2-details-link{
+  display:inline-block;
+  margin-top:18px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#168c80;
+  font:600 11px "JetBrains Mono",monospace;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  cursor:pointer;
+}
+.tele2-details-link:hover{opacity:.72}
+.tele2-details-link:focus-visible{outline:2px solid rgba(22,140,128,.35);outline-offset:4px;border-radius:2px}

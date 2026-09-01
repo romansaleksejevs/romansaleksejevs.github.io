@@ -30,3 +30,9 @@ v38
 - Added a dedicated .certificate-viewport clipping container so the certificate track is clipped but navigation arrows are not.
 - Right arrow is now a sibling of the viewport and forced above the carousel with z-index 30.
 - Updated CSS/JS cache-busting references from v36 to v38.
+
+
+v40
+- Tele2 “More details →” now uses the same visual style as “View technical details →”.
+- Removed bold formatting from Tele2 work-experience descriptive text and modal content.
+- Updated CSS/JS cache-busting references to v40.
