@@ -95,3 +95,6 @@ v69
 - Replaced Site-to-Site VPN Delivery project with Azure Cloud.
 - Added technical Azure enterprise networking, hybrid connectivity, and migration description.
 - Updated cache-busting references to v69.
+
+Version 70
+- Replaced Network Consolidation project with NetBox Source of Truth.
