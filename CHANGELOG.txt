@@ -63,3 +63,8 @@ v60
 v61
 - Added a brief Riga State Technical School (RVT) description below the Technical Secondary Education in Programming Technician entry.
 - Updated cache-busting references to v61.
+
+
+v62
+- Replaced Hardware Lifecycle Assessment project with Tufin Implementation.
+- Added Tufin enterprise deployment and multi-vendor firewall integration description.
