@@ -29,7 +29,6 @@ v51
 - Updated cache-busting references to v51.
 
 
-v52
-- Removed visible certificate names, providers/locations, and certificate years from all certificate gallery cards.
-- Certificate images remain clickable and open the existing certificate preview.
-- Updated cache-busting references to v52.
+v53
+- Certificate cards: removed the short certificate title and year only.
+- Preserved the descriptive certificate qualification text (for example, Cisco Certified Network Professional).
