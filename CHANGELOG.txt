@@ -58,3 +58,8 @@ v59
 
 v60
 - Added a brief Transport and Telecommunication Institute (TSI) description below the Bachelor's Degree in Software Engineering entry.
+
+
+v61
+- Added a brief Riga State Technical School (RVT) description below the Technical Secondary Education in Programming Technician entry.
+- Updated cache-busting references to v61.
