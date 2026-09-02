@@ -78,3 +78,8 @@ v63
 v64
 - Replaced Load Balancer Upgrade & Recovery project with SD-WAN Implementation.
 - Added a more technical description covering MPLS replacement, centralized WAN policy, multi-transport connectivity, dynamic path selection and application-aware routing.
+
+
+v65
+- Removed F5 BIG-IP and High Availability labels from the SD-WAN Implementation project.
+- Replaced them with SD-WAN and MPLS Migration labels.
