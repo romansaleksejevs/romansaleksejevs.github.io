@@ -68,3 +68,8 @@ v61
 v62
 - Replaced Hardware Lifecycle Assessment project with Tufin Implementation.
 - Added Tufin enterprise deployment and multi-vendor firewall integration description.
+
+
+v63
+- Replaced High CPU Incident Resolution project with VMware NSX-T project.
+- Added NSX-T design, implementation, support, and migration scope covering 1,000+ servers and 8 VRFs.
