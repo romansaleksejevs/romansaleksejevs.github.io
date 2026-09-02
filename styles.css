@@ -433,3 +433,11 @@
 
 /* v54 — center certificate caption text */
 .certificate-caption { text-align: center; align-items: center; }
+
+/* v57: Work Experience popup introductions use the full available width */
+#tele2-modal .network-modal-header p,
+#evolution-modal .network-modal-header p,
+#accenture-modal .network-modal-header p {
+  width: 100%;
+  max-width: none;
+}
