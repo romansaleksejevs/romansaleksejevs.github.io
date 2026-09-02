@@ -36,3 +36,7 @@ v53
 v54
 - Centered certificate caption text below all certificate images.
 - Kept certificate images, titles and popup behavior unchanged.
+
+
+v55
+- Updated certificate captions: FortiGate Security, FortiGate Infrastructure, Google Cybersecurity, and Orckit Corrigent Certificate.
