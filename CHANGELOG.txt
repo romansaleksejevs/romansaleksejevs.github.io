@@ -15,3 +15,15 @@ v49
 - Added 18px spacing between Work Experience popup detail boxes (Tele2, Evolution and Accenture).
 - Work Experience popup sections now visually match the separated Core Expertise detail boxes.
 - Updated cache-busting references to v49.
+
+
+v50
+- Added official company website links to Tele2 AB, Evolution, and Accenture in Work Experience.
+- Company links preserve the existing text appearance with no bold, underline, or other special link styling.
+
+
+v51
+- Rechecked Tele2, Evolution and Accenture official website URLs.
+- Made company-name links explicitly clickable while preserving identical typography and visual style.
+- Isolated external links from parent click handlers.
+- Updated cache-busting references to v51.

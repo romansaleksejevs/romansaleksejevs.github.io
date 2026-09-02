@@ -327,3 +327,11 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
 })();
+
+
+// v51: Keep external company links independent from any parent click handlers.
+document.querySelectorAll('.company-link').forEach(link => {
+  link.addEventListener('click', event => {
+    event.stopPropagation();
+  });
+});
