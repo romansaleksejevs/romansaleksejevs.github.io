@@ -83,3 +83,9 @@ v64
 v65
 - Removed F5 BIG-IP and High Availability labels from the SD-WAN Implementation project.
 - Replaced them with SD-WAN and MPLS Migration labels.
+
+
+v67
+- Replaced Catalyst & Nexus Lifecycle Upgrades project with Network Automation with Cisco Catalyst Center / DNA Center.
+- Added technical automation scope covering discovery, inventory, templates, SWIM, compliance, PnP, assurance, telemetry, REST APIs, Python and Ansible.
+- Updated cache-busting references to v67.
