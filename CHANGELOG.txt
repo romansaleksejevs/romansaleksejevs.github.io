@@ -89,3 +89,9 @@ v67
 - Replaced Catalyst & Nexus Lifecycle Upgrades project with Network Automation with Cisco Catalyst Center / DNA Center.
 - Added technical automation scope covering discovery, inventory, templates, SWIM, compliance, PnP, assurance, telemetry, REST APIs, Python and Ansible.
 - Updated cache-busting references to v67.
+
+
+v69
+- Replaced Site-to-Site VPN Delivery project with Azure Cloud.
+- Added technical Azure enterprise networking, hybrid connectivity, and migration description.
+- Updated cache-busting references to v69.
