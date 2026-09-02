@@ -40,3 +40,9 @@ v54
 
 v55
 - Updated certificate captions: FortiGate Security, FortiGate Infrastructure, Google Cybersecurity, and Orckit Corrigent Certificate.
+
+
+v56
+- Renamed Tallinn certificate caption to Widermind Certificate.
+- Renamed Tele2 certificate caption to Tele2 Extra Mile Award 2020.
+- Updated cache-busting references to v56.
