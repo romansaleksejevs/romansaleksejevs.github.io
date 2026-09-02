@@ -54,3 +54,7 @@ v58
 
 v59
 - Removed bold formatting from the Faculty of Computer Science, Information Technology and Energy text inside the Riga Technical University description.
+
+
+v60
+- Added a brief Transport and Telecommunication Institute (TSI) description below the Bachelor's Degree in Software Engineering entry.
