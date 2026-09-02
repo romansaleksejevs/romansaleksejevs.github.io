@@ -32,3 +32,7 @@ v51
 v53
 - Certificate cards: removed the short certificate title and year only.
 - Preserved the descriptive certificate qualification text (for example, Cisco Certified Network Professional).
+
+v54
+- Centered certificate caption text below all certificate images.
+- Kept certificate images, titles and popup behavior unchanged.
