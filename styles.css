@@ -394,3 +394,10 @@
 @media (max-width: 700px) {
   .network-modal-header h2 { font-size: 24px; }
 }
+
+/* v49: Work Experience popup section spacing — match Core Expertise cards */
+#tele2-modal .network-detail-section + .network-detail-section,
+#evolution-modal .network-detail-section + .network-detail-section,
+#accenture-modal .network-detail-section + .network-detail-section {
+  margin-top: 18px;
+}

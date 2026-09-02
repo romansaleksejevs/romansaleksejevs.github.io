@@ -10,3 +10,8 @@ v48
 - Fixed Accenture MORE DETAILS button by restoring its modal JavaScript handler.
 - Tele2 behavior remains unchanged.
 - Updated cache-busting references to v48.
+
+v49
+- Added 18px spacing between Work Experience popup detail boxes (Tele2, Evolution and Accenture).
+- Work Experience popup sections now visually match the separated Core Expertise detail boxes.
+- Updated cache-busting references to v49.
