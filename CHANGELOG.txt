@@ -46,3 +46,11 @@ v56
 - Renamed Tallinn certificate caption to Widermind Certificate.
 - Renamed Tele2 certificate caption to Tele2 Extra Mile Award 2020.
 - Updated cache-busting references to v56.
+
+
+v58
+- Added Riga Technical University overview below the Master's Degree in Computer Systems Design entry.
+
+
+v59
+- Removed bold formatting from the Faculty of Computer Science, Information Technology and Energy text inside the Riga Technical University description.
