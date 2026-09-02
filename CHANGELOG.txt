@@ -27,3 +27,9 @@ v51
 - Made company-name links explicitly clickable while preserving identical typography and visual style.
 - Isolated external links from parent click handlers.
 - Updated cache-busting references to v51.
+
+
+v52
+- Removed visible certificate names, providers/locations, and certificate years from all certificate gallery cards.
+- Certificate images remain clickable and open the existing certificate preview.
+- Updated cache-busting references to v52.
