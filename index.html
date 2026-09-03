@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=71" />
+  <link rel="stylesheet" href="styles.css?v=85" />
 </head>
 <body>
   <div class="noise"></div>
@@ -484,6 +484,7 @@ Currently, my main professional focus is Network Automation and Artificial Intel
           <p>
             Implemented NetBox as the centralized Source of Truth (SoT) for enterprise network infrastructure. Integrated network devices and automation workflows through REST APIs to collect and maintain inventory, IPAM, VLAN, VRF, interface and connectivity data, providing centralized visibility and a consistent data source for network operations and automation.
           </p>
+          <button class="netbox-more-details tele2-details-link" type="button" aria-haspopup="dialog" aria-controls="netbox-modal">View technical details →</button>
         </article>
       </div>
     </section>
@@ -610,6 +611,45 @@ Currently, my main professional focus is Network Automation and Artificial Intel
       </div>
     </div>
 
+
+    <div class="network-modal" id="netbox-modal" aria-hidden="true">
+      <div class="network-modal-dialog netbox-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="netbox-modal-title">
+        <button class="network-modal-close netbox-modal-close" type="button" aria-label="Close NetBox technical details">×</button>
+        <div class="network-modal-header">
+          <div class="eyebrow">NETBOX · SOURCE OF TRUTH</div>
+          <h2 id="netbox-modal-title">NetBox Source of Truth</h2>
+          <p>Centralized enterprise network inventory, IPAM and infrastructure data integrated with automation workflows through REST APIs.</p>
+        </div>
+        <section class="network-detail-section netbox-overview-grid">
+          <div class="netbox-overview-copy">
+            <p><a class="netbox-official-link" href="https://netboxlabs.com" target="_blank" rel="noopener noreferrer"><strong>NetBox</strong></a> is an open-source platform for managing and documenting network infrastructure. It is commonly used by Network Engineers, DevOps Engineers, and Infrastructure teams as a <strong>Source of Truth (SoT)</strong> for network and data-center environments.</p>
+            <p>NetBox can store information about:</p>
+            <ul>
+              <li>Sites, regions, buildings, and data centers</li>
+              <li>Racks and physical devices</li>
+              <li>Routers, switches, firewalls, servers, and appliances</li>
+              <li>Device models, vendors, and hardware roles</li>
+              <li>Interfaces and physical connections</li>
+              <li>IP addresses and prefixes</li>
+              <li>VLANs and VRFs</li>
+              <li>BGP-related infrastructure information</li>
+              <li>Circuits and providers</li>
+              <li>Virtual machines and clusters</li>
+              <li>Tenants</li>
+              <li>Custom fields, tags, and configuration context</li>
+            </ul>
+          </div>
+          <button class="netbox-image-section netbox-image-open" type="button" aria-label="Open NetBox screenshot full screen">
+            <img src="netbox-ipam-ipaddresses.png" alt="NetBox IPAM IP Addresses interface showing centralized enterprise network addressing data" />
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <div class="netbox-image-lightbox" id="netbox-image-lightbox" aria-hidden="true">
+      <button class="netbox-image-lightbox-close" type="button" aria-label="Close full-screen NetBox screenshot">×</button>
+      <img src="netbox-ipam-ipaddresses.png" alt="NetBox IPAM IP Addresses interface full-screen preview" />
+    </div>
 
     <div class="network-modal" id="tele2-modal" aria-hidden="true">
       <div class="network-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="tele2-modal-title">
@@ -802,6 +842,6 @@ Currently, my main professional focus is Network Automation and Artificial Intel
     <span>Network · Security · Cloud · Automation</span>
   </footer>
 
-  <script src="script.js?v=71"></script>
+  <script src="script.js?v=85"></script>
 </body>
 </html>

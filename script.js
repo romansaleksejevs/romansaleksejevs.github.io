@@ -335,3 +335,46 @@ document.querySelectorAll('.company-link').forEach(link => {
     event.stopPropagation();
   });
 });
+
+// v78: NetBox Source of Truth technical details modal
+(() => {
+  const button = document.querySelector(".netbox-more-details");
+  const modal = document.getElementById("netbox-modal");
+  const closeBtn = modal?.querySelector(".netbox-modal-close");
+  if (!button || !modal || !closeBtn) return;
+  let lastFocusedElement = null;
+  function openModal() {
+    lastFocusedElement = document.activeElement;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    lastFocusedElement?.focus();
+  }
+  button.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
+})();
+
+
+// v85: Full-screen NetBox screenshot preview
+(() => {
+  const trigger = document.querySelector('.netbox-image-open');
+  const lightbox = document.getElementById('netbox-image-lightbox');
+  const closeBtn = lightbox?.querySelector('.netbox-image-lightbox-close');
+  if (!trigger || !lightbox || !closeBtn) return;
+  function openImage() { lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); closeBtn.focus(); }
+  function closeImage() { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); trigger.focus(); }
+  trigger.addEventListener('click', openImage);
+  closeBtn.addEventListener('click', closeImage);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeImage(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('open')) { e.stopImmediatePropagation(); closeImage(); } }, true);
+})();

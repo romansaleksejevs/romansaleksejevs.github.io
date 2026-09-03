@@ -98,3 +98,17 @@ v69
 
 Version 70
 - Replaced Network Consolidation project with NetBox Source of Truth.
+
+- v76: Replaced FortiGate Security certificate PDF and preview image with the supplied single-page certificate.
+
+v78
+- Added VIEW TECHNICAL DETAILS link under the NetBox Source of Truth project.
+- Added a NetBox technical details popup with the supplied NetBox IPAM screenshot.
+
+
+v79: NetBox technical details popup updated to a two-column layout with the existing uploaded screenshot on the left and NetBox overview/details on the right.
+
+
+v85
+- Linked NetBox in the NetBox technical-details description to https://netboxlabs.com without changing its visual style.
+- Added click-to-full-screen behavior for the NetBox screenshot.

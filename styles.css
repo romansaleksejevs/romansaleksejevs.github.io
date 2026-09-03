@@ -441,3 +441,119 @@
   width: 100%;
   max-width: none;
 }
+
+/* v78: NetBox project technical-details popup */
+#netbox-modal .network-modal-dialog{width:min(1240px,96vw)}
+#netbox-modal .network-modal-header p{width:100%;max-width:none}
+.netbox-image-section{padding:18px;overflow:hidden;background:#f8fafc}
+.netbox-image-section img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #e4e9ef}
+@media(max-width:620px){.netbox-image-section{padding:10px}.netbox-image-section img{border-radius:9px}}
+
+
+/* NetBox technical details split layout — v79 */
+.netbox-overview-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(320px,.85fr);
+  gap:24px;
+  align-items:start;
+  padding:18px;
+}
+.netbox-overview-grid .netbox-image-section{padding:0;overflow:hidden;background:#f8fafc}
+.netbox-overview-grid .netbox-image-section img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #e4e9ef}
+.netbox-overview-copy{font-size:15px;line-height:1.6;color:var(--text,#20242b)}
+.netbox-overview-copy p{margin:0 0 14px}
+.netbox-overview-copy ul{margin:0;padding-left:22px}
+.netbox-overview-copy li{margin:5px 0}
+@media(max-width:900px){
+  .netbox-overview-grid{grid-template-columns:1fr;gap:18px}
+}
+@media(max-width:620px){
+  .netbox-overview-grid{padding:10px}
+  .netbox-overview-grid .netbox-image-section img{border-radius:9px}
+}
+
+/* v80: NetBox popup image reduced to approximately half its previous display size */
+.netbox-overview-grid{
+  grid-template-columns:minmax(0,.675fr) minmax(420px,1fr);
+}
+.netbox-overview-grid .netbox-image-section{
+  max-width:50%;
+  justify-self:start;
+}
+@media(max-width:900px){
+  .netbox-overview-grid .netbox-image-section{max-width:50%;}
+}
+@media(max-width:620px){
+  .netbox-overview-grid .netbox-image-section{max-width:100%;}
+}
+
+/* v81: NetBox popup image is 1.5x smaller than the original v79 display */
+.netbox-overview-grid{
+  grid-template-columns:minmax(0,.9fr) minmax(420px,1fr);
+}
+.netbox-overview-grid .netbox-image-section{
+  max-width:66.6667%;
+  justify-self:start;
+}
+@media(max-width:900px){
+  .netbox-overview-grid .netbox-image-section{max-width:66.6667%;}
+}
+@media(max-width:620px){
+  .netbox-overview-grid .netbox-image-section{max-width:100%;}
+}
+
+
+/* v82: NetBox text left, screenshot right at original v79 display size */
+.netbox-overview-grid{
+  grid-template-columns:minmax(320px,.85fr) minmax(0,1.35fr);
+}
+.netbox-overview-grid .netbox-image-section{
+  max-width:100%;
+  width:100%;
+  justify-self:stretch;
+}
+@media(max-width:900px){
+  .netbox-overview-grid{grid-template-columns:1fr;gap:18px}
+  .netbox-overview-grid .netbox-image-section{max-width:100%;width:100%;}
+}
+
+/* v83: NetBox screenshot right at 80% of original v79 display size */
+.netbox-overview-grid .netbox-image-section{
+  width:80%;
+  max-width:80%;
+  justify-self:end;
+}
+@media(max-width:900px){
+  .netbox-overview-grid .netbox-image-section{width:80%;max-width:80%;justify-self:center;}
+}
+@media(max-width:620px){
+  .netbox-overview-grid .netbox-image-section{width:100%;max-width:100%;}
+}
+
+/* v84: NetBox text expands into the space freed by the 80% screenshot */
+.netbox-overview-grid{
+  grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);
+}
+.netbox-overview-grid .netbox-image-section{
+  width:100%;
+  max-width:100%;
+  justify-self:stretch;
+}
+@media(max-width:900px){
+  .netbox-overview-grid{grid-template-columns:1fr;gap:18px}
+  .netbox-overview-grid .netbox-image-section{width:80%;max-width:80%;justify-self:center;}
+}
+@media(max-width:620px){
+  .netbox-overview-grid .netbox-image-section{width:100%;max-width:100%;}
+}
+
+
+/* v85: NetBox official link and full-screen screenshot viewer */
+.netbox-official-link{color:inherit;text-decoration:none;font:inherit;}
+.netbox-official-link strong{font-weight:inherit;}
+.netbox-official-link:hover,.netbox-official-link:focus{color:inherit;text-decoration:none;}
+button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:inherit;cursor:zoom-in;text-align:initial;}
+.netbox-image-lightbox{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,10,18,.94);}
+.netbox-image-lightbox.open{display:flex;}
+.netbox-image-lightbox img{display:block;max-width:96vw;max-height:94vh;width:auto;height:auto;object-fit:contain;}
+.netbox-image-lightbox-close{position:fixed;top:18px;right:24px;z-index:3001;border:0;background:transparent;color:#fff;font-size:42px;line-height:1;cursor:pointer;}
