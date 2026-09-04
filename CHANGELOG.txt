@@ -118,3 +118,5 @@ v86 - Added View Technical Details button and technical popup for Tufin Implemen
 - v87: Added the uploaded Tufin dashboard image to the right side of the Tufin Implementation technical-details popup.
 
 Version 89: Organized project screenshots into project-images/ and updated HTML references.
+
+- v90: Added Azure Cloud technical-details popup with Azure dashboard screenshot.

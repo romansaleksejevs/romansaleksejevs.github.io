@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=89" />
+  <link rel="stylesheet" href="styles.css?v=91" />
 </head>
 <body>
   <div class="noise"></div>
@@ -464,6 +464,7 @@ Currently, my main professional focus is Network Automation and Artificial Intel
           <p>
             Designed, implemented and supported Microsoft Azure cloud infrastructure for an enterprise network, including virtual networks, subnets, routing, network security and hybrid connectivity. Migrated part of the existing on-premises infrastructure to Azure while maintaining secure and resilient connectivity between cloud and data center environments.
           </p>
+          <button class="azure-more-details tele2-details-link" type="button" aria-haspopup="dialog" aria-controls="azure-modal">View technical details →</button>
         </article>
 
         <article class="project reveal">
@@ -471,6 +472,7 @@ Currently, my main professional focus is Network Automation and Artificial Intel
           <p>
             Development, implementation and support of VMware NSX-T. Created the network design for a new on-premises VMware virtualization platform and supported the implementation and operation of the NSX-T environment. Migrated the existing network and server infrastructure to the new NSX-T platform, including more than 1,000 servers and 8 VRFs.
           </p>
+          <button class="nsxt-more-details tele2-details-link" type="button" aria-haspopup="dialog" aria-controls="nsxt-modal">View technical details →</button>
         </article>
 
         <article class="project reveal">
@@ -614,6 +616,42 @@ Currently, my main professional focus is Network Automation and Artificial Intel
     </div>
 
 
+    <div class="network-modal" id="azure-modal" aria-hidden="true">
+      <div class="network-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="azure-modal-title">
+        <button class="network-modal-close azure-modal-close" type="button" aria-label="Close Azure Cloud technical details">×</button>
+        <div class="network-modal-header">
+          <div class="eyebrow">MICROSOFT AZURE · HYBRID CLOUD NETWORKING</div>
+          <h2 id="azure-modal-title">Azure Cloud</h2>
+          <p>Design, implementation, migration and operational support of Microsoft Azure networking integrated with existing enterprise data-center infrastructure.</p>
+        </div>
+        <div class="tufin-overview-grid">
+          <div class="tufin-overview-copy">
+            <section class="network-detail-section">
+              <h3>Cloud Network Architecture</h3>
+              <ul>
+                <li>Designed Azure Virtual Networks (VNets), subnets, IP addressing and routing for enterprise workloads.</li>
+                <li>Implemented Network Security Groups (NSGs), route tables and network segmentation to control cloud traffic flows.</li>
+                <li>Designed hybrid connectivity between Azure and on-premises data centers using secure VPN and enterprise routing concepts.</li>
+                <li>Supported resilient connectivity, DNS dependencies and controlled access between cloud and existing infrastructure.</li>
+              </ul>
+            </section>
+            <section class="network-detail-section">
+              <h3>Migration &amp; Operations</h3>
+              <ul>
+                <li>Migrated selected infrastructure and services from on-premises environments to Microsoft Azure.</li>
+                <li>Validated routing, security policies, service reachability and end-to-end connectivity during migration activities.</li>
+                <li>Supported Azure networking operations, troubleshooting and integration with enterprise security and monitoring processes.</li>
+                <li>Maintained hybrid network availability while transitioning workloads between data-center and cloud environments.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="tufin-image-section">
+            <img src="project-images/azure-dashboard.jpeg" alt="Microsoft Azure portal dashboard">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="network-modal" id="sdwan-modal" aria-hidden="true">
       <div class="network-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sdwan-modal-title">
         <button class="network-modal-close sdwan-modal-close" type="button" aria-label="Close SD-WAN technical details">×</button>
@@ -645,6 +683,42 @@ Currently, my main professional focus is Network Automation and Artificial Intel
           </div>
           <div class="tufin-image-section">
             <img src="project-images/sd-wan-dashboard.jpeg" alt="Cisco vManage SD-WAN dashboard">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="network-modal" id="nsxt-modal" aria-hidden="true">
+      <div class="network-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="nsxt-modal-title">
+        <button class="network-modal-close nsxt-modal-close" type="button" aria-label="Close VMware NSX-T technical details">×</button>
+        <div class="network-modal-header">
+          <div class="eyebrow">VMWARE NSX-T · SOFTWARE-DEFINED DATA CENTER</div>
+          <h2 id="nsxt-modal-title">VMware NSX-T</h2>
+          <p>Design, implementation, migration and operational support of VMware NSX-T networking for a large-scale on-premises virtualization platform.</p>
+        </div>
+        <div class="tufin-overview-grid">
+          <div class="tufin-overview-copy">
+            <section class="network-detail-section">
+              <h3>Architecture &amp; Implementation</h3>
+              <ul>
+                <li>Designed NSX-T network architecture for a new enterprise VMware virtualization platform.</li>
+                <li>Implemented logical segments, transport zones, overlay networking and integration with the physical data-center network.</li>
+                <li>Designed Tier-0 / Tier-1 gateway connectivity, north-south routing and resilient upstream network integration.</li>
+                <li>Supported NSX Edge infrastructure, routing, NAT and distributed network services.</li>
+              </ul>
+            </section>
+            <section class="network-detail-section">
+              <h3>Migration, Security &amp; Operations</h3>
+              <ul>
+                <li>Migrated more than 1,000 servers and 8 VRFs from the existing network environment to the NSX-T platform.</li>
+                <li>Implemented network segmentation and micro-segmentation using NSX-T distributed firewall capabilities.</li>
+                <li>Validated routing, connectivity, security policy and application reachability throughout migration activities.</li>
+                <li>Provided operational support, troubleshooting and lifecycle management for the production NSX-T environment.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="tufin-image-section">
+            <img src="project-images/nsx-t-dashboard.jpeg" alt="VMware NSX-T configuration overview dashboard">
           </div>
         </div>
       </div>
@@ -916,6 +990,6 @@ Currently, my main professional focus is Network Automation and Artificial Intel
     <span>Network · Security · Cloud · Automation</span>
   </footer>
 
-  <script src="script.js?v=89"></script>
+  <script src="script.js?v=91"></script>
 </body>
 </html>
