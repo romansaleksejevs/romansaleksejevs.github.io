@@ -112,3 +112,7 @@ v79: NetBox technical details popup updated to a two-column layout with the exis
 v85
 - Linked NetBox in the NetBox technical-details description to https://netboxlabs.com without changing its visual style.
 - Added click-to-full-screen behavior for the NetBox screenshot.
+
+v86 - Added View Technical Details button and technical popup for Tufin Implementation.
+
+- v87: Added the uploaded Tufin dashboard image to the right side of the Tufin Implementation technical-details popup.
