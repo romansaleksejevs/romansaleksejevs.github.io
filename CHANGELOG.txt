@@ -187,3 +187,10 @@ v104
 - Positioned the RVT diploma on the left and description on the right, matching the TSI popup.
 - Removed the separate RVT Education focus and School sections.
 - Updated CSS/JS cache-busting references to v104.
+
+
+v105
+- Reorganized all image assets under a single images/ directory.
+- Added images/profile/, images/certificates/, images/diplomas/, and images/projects/ subfolders.
+- Updated all HTML image references to the new paths.
+- Kept certificate PDF documents in certificates/.

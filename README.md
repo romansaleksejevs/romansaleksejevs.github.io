@@ -19,3 +19,13 @@
 - Vercel
 
 The site is static and requires no backend.
+
+
+## Image structure (v105)
+All image assets are now organized under `images/`:
+- `images/profile/` — profile/photo assets
+- `images/certificates/` — certificate preview images
+- `images/diplomas/` — education diploma images
+- `images/projects/` — project/dashboard screenshots
+
+Certificate PDF files remain in `certificates/`.
