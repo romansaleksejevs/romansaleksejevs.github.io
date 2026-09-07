@@ -602,3 +602,15 @@ button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:
   max-width:100% !important;
   max-height:100% !important;
 }
+
+/* v97: align RTU MORE DETAILS action to the right */
+.rtu-more-details {
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+/* v98: right-align all education MORE DETAILS actions */
+.education-more-details { display:block; width:max-content; margin-left:auto; margin-right:0; }

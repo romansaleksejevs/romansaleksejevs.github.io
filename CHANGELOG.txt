@@ -142,3 +142,17 @@ v95
 - Updated all certificate previews to open in a fit-to-page view.
 - PDF certificates now request page-fit zoom so the complete certificate is visible in the modal without horizontal or vertical scrolling.
 - Image certificates continue to use object-fit: contain.
+
+
+v96
+- Added MORE DETAILS button after Riga Technical University description.
+- Added RTU education details modal with additional information.
+
+v97
+- Moved the Riga Technical University MORE DETAILS → link to the right side.
+
+
+v98
+- Added right-aligned MORE DETAILS buttons for TSI and Riga State Technical School education entries.
+- Added detailed modal windows for both education entries.
+- Updated CSS/JS cache-busting references to v98.

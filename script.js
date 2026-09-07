@@ -458,3 +458,40 @@ document.querySelectorAll('.company-link').forEach(link => {
   modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
 })();
+
+
+// Riga Technical University education details modal
+(() => {
+  const button = document.querySelector(".rtu-more-details");
+  const modal = document.getElementById("rtu-modal");
+  const closeBtn = modal?.querySelector(".rtu-modal-close");
+  if (!button || !modal || !closeBtn) return;
+  let lastFocusedElement;
+  function openModal() { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); }
+  button.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+
+
+// TSI and RVT education details modals
+(() => {
+  const configs = [
+    [".tsi-more-details", "tsi-modal", ".tsi-modal-close"],
+    [".rvt-more-details", "rvt-modal", ".rvt-modal-close"]
+  ];
+  configs.forEach(([buttonSelector, modalId, closeSelector]) => {
+    const button = document.querySelector(buttonSelector);
+    const modal = document.getElementById(modalId);
+    const closeBtn = modal?.querySelector(closeSelector);
+    if (!button || !modal || !closeBtn) return;
+    let lastFocusedElement;
+    const openModal = () => { lastFocusedElement = document.activeElement; modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; closeBtn.focus(); };
+    const closeModal = () => { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; lastFocusedElement?.focus(); };
+    button.addEventListener("click", openModal); closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+  });
+})();
