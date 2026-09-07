@@ -120,3 +120,9 @@ v86 - Added View Technical Details button and technical popup for Tufin Implemen
 Version 89: Organized project screenshots into project-images/ and updated HTML references.
 
 - v90: Added Azure Cloud technical-details popup with Azure dashboard screenshot.
+
+
+v92
+- Added CCNP-DC.png to the certificate gallery.
+- Added Cisco Data Center Unified Fabric Solutions Implementation certificate card and modal preview.
+- Updated CSS/JS cache-busting references to v92.
