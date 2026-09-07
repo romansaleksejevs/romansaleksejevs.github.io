@@ -24,10 +24,11 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 (() => {
   const modal = document.getElementById("certificate-lightbox");
   const frame = document.getElementById("certificate-lightbox-frame");
+  const image = document.getElementById("certificate-lightbox-image");
   const closeBtn = modal?.querySelector(".certificate-lightbox-close");
   const cards = document.querySelectorAll(".certificate-pdf");
 
-  if (!modal || !frame || !closeBtn || !cards.length) return;
+  if (!modal || !frame || !image || !closeBtn || !cards.length) return;
 
   let lastFocusedElement = null;
 
@@ -36,7 +37,18 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
     if (!pdfUrl) return;
 
     lastFocusedElement = document.activeElement;
-    frame.src = pdfUrl;
+    const isImage = /\.(png|jpe?g|webp|gif|svg)(?:[?#].*)?$/i.test(pdfUrl);
+    if (isImage) {
+      frame.src = "";
+      frame.style.display = "none";
+      image.src = pdfUrl;
+      image.style.display = "block";
+    } else {
+      image.src = "";
+      image.style.display = "none";
+      frame.src = pdfUrl;
+      frame.style.display = "block";
+    }
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -47,6 +59,9 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
     frame.src = "";
+    image.src = "";
+    frame.style.display = "block";
+    image.style.display = "none";
     document.body.style.overflow = "";
     lastFocusedElement?.focus();
   }

@@ -572,3 +572,23 @@ button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:
 /* v90: Azure Cloud technical-details popup */
 #azure-modal .network-modal-dialog{width:min(1380px,97vw)}
 #azure-modal .network-modal-header p{width:100%;max-width:none}
+
+
+/* v94: fit image certificates fully inside the certificate popup */
+#certificate-lightbox-image{
+  display:none;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center;
+  margin:auto;
+  background:#fff;
+}
+.certificate-modal-viewer:has(#certificate-lightbox-image[style*="display: block"]){
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
