@@ -130,3 +130,15 @@ v92
 
 v93
 - Moved Cisco Data Center Unified Fabric Solutions Implementation (CCNP-DC.png) certificate from position 2 to position 4 in the certificate carousel.
+
+
+v94
+- Updated certificate preview behavior for image certificates.
+- PNG/JPG certificates now scale to fit completely inside the popup without horizontal or vertical scrolling.
+- PDF certificate behavior remains unchanged.
+
+
+v95
+- Updated all certificate previews to open in a fit-to-page view.
+- PDF certificates now request page-fit zoom so the complete certificate is visible in the modal without horizontal or vertical scrolling.
+- Image certificates continue to use object-fit: contain.

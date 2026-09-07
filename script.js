@@ -46,7 +46,10 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
     } else {
       image.src = "";
       image.style.display = "none";
-      frame.src = pdfUrl;
+      // Open every PDF in a page-fit view so the complete certificate is visible
+      // without horizontal or vertical scrolling inside the popup.
+      const separator = pdfUrl.includes("#") ? "&" : "#";
+      frame.src = `${pdfUrl}${separator}view=Fit&zoom=page-fit`;
       frame.style.display = "block";
     }
     modal.classList.add("open");

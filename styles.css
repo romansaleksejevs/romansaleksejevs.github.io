@@ -592,3 +592,13 @@ button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:
   justify-content:center;
   overflow:hidden;
 }
+
+
+/* v95: all certificate previews fit completely inside the popup */
+.certificate-modal-viewer iframe,
+#certificate-lightbox-image{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+}
