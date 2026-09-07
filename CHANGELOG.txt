@@ -156,3 +156,34 @@ v98
 - Added right-aligned MORE DETAILS buttons for TSI and Riga State Technical School education entries.
 - Added detailed modal windows for both education entries.
 - Updated CSS/JS cache-busting references to v98.
+
+
+v99
+- Added TSI diploma image to the Transport and Telecommunication Institute MORE DETAILS popup.
+- Added responsive fit-to-window styling for the diploma image.
+- Updated CSS/JS cache-busting references to v99.
+
+v100
+- Moved the TSI diploma image directly under the Bachelor's Degree in Software Engineering title in the MORE DETAILS popup.
+
+v101
+- TSI diploma image aligned to the left inside the existing education popup.
+- TSI diploma image reduced to approximately half the previous display size.
+- TSI diploma image container background changed from light gray to white.
+- Updated CSS/JS cache-busting references to v101.
+
+
+v102
+- Positioned the TSI introduction text directly to the right of the diploma image in the education details popup.
+- Preserved the smaller left-aligned diploma and white background.
+
+v103
+- Removed the Education focus section from the TSI MORE DETAILS popup.
+- Removed the University section from the TSI MORE DETAILS popup.
+
+
+v104
+- Added RVT diploma image to the Riga State Technical School education popup.
+- Positioned the RVT diploma on the left and description on the right, matching the TSI popup.
+- Removed the separate RVT Education focus and School sections.
+- Updated CSS/JS cache-busting references to v104.
