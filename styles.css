@@ -621,7 +621,7 @@ button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:
 #tsi-modal .network-detail-section + .network-detail-section{margin-top:18px}
 #tsi-modal .tsi-diploma-section{padding:24px}
 #tsi-modal .tsi-diploma-wrap{display:flex;justify-content:flex-start;align-items:center;width:100%;overflow:hidden;border-radius:14px;background:#fff}
-#tsi-modal .tsi-diploma-image{display:block;width:260px;max-width:50%;height:auto;max-height:32vh;object-fit:contain;border-radius:12px;box-shadow:0 10px 28px rgba(31,41,55,.12)}
+#tsi-modal .tsi-diploma-image{display:block;width:260px;max-width:50%;height:auto;max-height:32vh;object-fit:contain;border-radius:12px;box-shadow:none}
 @media(max-width:620px){#tsi-modal .tsi-diploma-section{padding:18px}#tsi-modal .tsi-diploma-image{width:180px;max-width:60%;max-height:29vh}}
 
 /* v102: TSI diploma and introduction side-by-side */
