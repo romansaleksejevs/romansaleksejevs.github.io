@@ -621,30 +621,102 @@ button.netbox-image-section{border:0;margin:0;padding:0;background:#f8fafc;font:
 #tsi-modal .network-detail-section + .network-detail-section{margin-top:18px}
 #tsi-modal .tsi-diploma-section{padding:24px}
 #tsi-modal .tsi-diploma-wrap{display:flex;justify-content:flex-start;align-items:center;width:100%;overflow:hidden;border-radius:14px;background:#fff}
-#tsi-modal .tsi-diploma-image{display:block;width:468px;max-width:100%;height:auto;max-height:57.6vh;object-fit:contain;border-radius:12px;box-shadow:none}
-@media(max-width:620px){#tsi-modal .tsi-diploma-section{padding:18px}#tsi-modal .tsi-diploma-image{width:324px;max-width:100%;max-height:52.2vh}}
+#tsi-modal .tsi-diploma-image{display:block;width:260px;max-width:50%;height:auto;max-height:32vh;object-fit:contain;border-radius:12px;box-shadow:0 10px 28px rgba(31,41,55,.12)}
+@media(max-width:620px){#tsi-modal .tsi-diploma-section{padding:18px}#tsi-modal .tsi-diploma-image{width:180px;max-width:60%;max-height:29vh}}
 
 /* v102: TSI diploma and introduction side-by-side */
 #tsi-modal .tsi-diploma-intro{display:flex;align-items:flex-start;gap:24px;margin-top:18px}
 #tsi-modal .tsi-diploma-intro .tsi-diploma-wrap{flex:0 0 auto;width:auto}
 #tsi-modal .tsi-diploma-intro p{flex:1;margin:0;min-width:0}
-@media(max-width:700px){#tsi-modal .tsi-diploma-intro{gap:16px}#tsi-modal .tsi-diploma-image{width:270px;max-width:100%}}
-@media(max-width:520px){#tsi-modal .tsi-diploma-intro{flex-direction:column}#tsi-modal .tsi-diploma-image{width:288px;max-width:100%}}
+@media(max-width:700px){#tsi-modal .tsi-diploma-intro{gap:16px}#tsi-modal .tsi-diploma-image{width:150px;max-width:42vw}}
+@media(max-width:520px){#tsi-modal .tsi-diploma-intro{flex-direction:column}#tsi-modal .tsi-diploma-image{width:160px;max-width:60%}}
 
 
 /* v104: RVT diploma and introduction, matching TSI popup layout */
 #rvt-modal .network-modal-dialog{width:min(1120px,96vw)}
 #rvt-modal .rvt-diploma-intro{display:flex;align-items:flex-start;gap:24px;margin-top:18px}
 #rvt-modal .rvt-diploma-wrap{display:flex;justify-content:flex-start;align-items:center;flex:0 0 auto;width:auto;overflow:hidden;border-radius:14px;background:#fff}
-#rvt-modal .rvt-diploma-image{display:block;width:468px;max-width:100%;height:auto;max-height:57.6vh;object-fit:contain;border-radius:12px;box-shadow:none}
+#rvt-modal .rvt-diploma-image{display:block;width:260px;max-width:50%;height:auto;max-height:32vh;object-fit:contain;border-radius:12px;box-shadow:0 10px 28px rgba(31,41,55,.12)}
 #rvt-modal .rvt-diploma-intro p{flex:1;margin:0;min-width:0}
-@media(max-width:700px){#rvt-modal .rvt-diploma-intro{gap:16px}#rvt-modal .rvt-diploma-image{width:270px;max-width:100%}}
-@media(max-width:520px){#rvt-modal .rvt-diploma-intro{flex-direction:column}#rvt-modal .rvt-diploma-image{width:288px;max-width:100%}}
+@media(max-width:700px){#rvt-modal .rvt-diploma-intro{gap:16px}#rvt-modal .rvt-diploma-image{width:150px;max-width:42vw}}
+@media(max-width:520px){#rvt-modal .rvt-diploma-intro{flex-direction:column}#rvt-modal .rvt-diploma-image{width:160px;max-width:60%}}
 
-/* Enlarge both education diplomas by 80%, bounded by the popup width. */
-#tsi-modal .tsi-diploma-wrap,
-#rvt-modal .rvt-diploma-wrap{max-width:100%}
-@media(max-width:700px){
-  #tsi-modal .tsi-diploma-intro,
-  #rvt-modal .rvt-diploma-intro{flex-direction:column}
+/* v106: TSI education popup uses a clean white content background */
+#tsi-modal .network-modal-dialog,
+#tsi-modal .network-modal-header,
+#tsi-modal .tsi-diploma-intro,
+#tsi-modal .tsi-diploma-wrap {
+  background: #fff;
 }
+
+/* v107: make the near-white pixels around the TSI diploma visually pure white */
+#tsi-modal .tsi-diploma-image {
+  filter: contrast(1.02);
+}
+#tsi-modal .network-modal-dialog,
+#tsi-modal .network-modal-header,
+#tsi-modal .tsi-diploma-intro,
+#tsi-modal .tsi-diploma-wrap {
+  background-color: #ffffff !important;
+}
+
+/* v108: normalize the off-white background embedded in the TSI diploma image */
+#tsi-modal .tsi-diploma-image { filter: none; background:#fff; }
+
+/* v109: remove the gray halo/shadow around the TSI diploma */
+#tsi-modal .tsi-diploma-wrap {
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  overflow: visible;
+}
+#tsi-modal .tsi-diploma-image {
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  filter: none !important;
+}
+
+/* v110: display TSI diploma approximately 2x larger in the education popup */
+#tsi-modal .tsi-diploma-image {
+  width: 520px;
+  max-width: min(60vw, 520px);
+  max-height: 64vh;
+}
+@media(max-width:700px){#tsi-modal .tsi-diploma-image{width:300px;max-width:48vw;max-height:58vh}}
+@media(max-width:520px){#tsi-modal .tsi-diploma-image{width:320px;max-width:90%;max-height:58vh}}
+
+/* v111: TSI diploma 1.5x the original size */
+#tsi-modal .tsi-diploma-image {
+  width: 390px;
+  max-width: min(52vw, 390px);
+  max-height: 50vh;
+}
+@media(max-width:700px){#tsi-modal .tsi-diploma-image{width:225px;max-width:44vw;max-height:46vh}}
+@media(max-width:520px){#tsi-modal .tsi-diploma-image{width:240px;max-width:75%;max-height:46vh}}
+
+/* v112: TSI diploma 20% smaller than v111 */
+#tsi-modal .tsi-diploma-image {
+  width:312px;
+  max-width:56%;
+  max-height:38vh;
+}
+@media(max-width:700px){#tsi-modal .tsi-diploma-image{width:180px;max-width:35vw;max-height:37vh}}
+@media(max-width:520px){#tsi-modal .tsi-diploma-image{width:192px;max-width:60%;max-height:37vh}}
+
+/* v113: RVT diploma sizing and clean white presentation matching TSI v112 */
+#rvt-modal .network-modal-dialog,
+#rvt-modal .network-modal-header,
+#rvt-modal .rvt-diploma-intro,
+#rvt-modal .rvt-diploma-wrap { background:#fff; }
+#rvt-modal .rvt-diploma-wrap { box-shadow:none; }
+#rvt-modal .rvt-diploma-image {
+  width:312px;
+  max-width:60%;
+  max-height:38vh;
+  object-fit:contain;
+  box-shadow:none;
+  background:#fff;
+}
+@media(max-width:700px){#rvt-modal .rvt-diploma-image{width:180px;max-width:35vw;max-height:37vh}}
+@media(max-width:520px){#rvt-modal .rvt-diploma-image{width:192px;max-width:60%;max-height:37vh}}
