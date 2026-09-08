@@ -1,3 +1,5 @@
+v106: Certificate links and popup now use gallery images; missing images show a friendly message. Script cache version updated.
+
 
 v47
 - Reduced main heading size inside Core Expertise and Work Experience popup dialogs.
@@ -194,15 +196,3 @@ v105
 - Added images/profile/, images/certificates/, images/diplomas/, and images/projects/ subfolders.
 - Updated all HTML image references to the new paths.
 - Kept certificate PDF documents in certificates/.
-
-v106
-- Changed the TSI Bachelor's Degree in Software Engineering popup background around and beneath the diploma image to pure white.
-
-v109
-- Removed the gray halo/shadow around the TSI diploma image in the Education popup.
-- Cropped excess near-white image margin and normalized the remaining surrounding area to pure white.
-- Removed CSS box shadow from the TSI diploma for a seamless white background.
-
-v110
-- Increased the displayed TSI diploma size in the Software Engineering education popup to approximately 2x its previous desktop size.
-- Kept responsive limits for tablet and mobile layouts.

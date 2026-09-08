@@ -29,3 +29,8 @@ All image assets are now organized under `images/`:
 - `images/projects/` — project/dashboard screenshots
 
 Certificate PDF files remain in `certificates/`.
+
+## Certificate popup fix (v106)
+Certificate cards now open the same image used in the gallery, avoiding a dependency on separate PDF files and browser PDF viewers.
+
+Replace index.html and script.js in your existing website with these versions. Keep your existing images/ folder. The image assets and certificate PDFs were not supplied with this update and are not included in the ZIP. This ZIP contains all six supplied files under their deployment filenames.
