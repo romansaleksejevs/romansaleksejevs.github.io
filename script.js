@@ -30,29 +30,28 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
   if (!modal || !frame || !image || !closeBtn || !cards.length) return;
 
-  const status = document.createElement("p");
-  status.setAttribute("role", "status");
-  status.hidden = true;
-  image.parentElement.appendChild(status);
   let lastFocusedElement = null;
 
   function openCertificateModal(card) {
-    const thumbnail = card.querySelector("img");
-    const imageUrl = thumbnail?.currentSrc || thumbnail?.getAttribute("src") || card.getAttribute("href");
-    if (!imageUrl) return;
+    const pdfUrl = card.getAttribute("href");
+    if (!pdfUrl) return;
 
     lastFocusedElement = document.activeElement;
-    frame.removeAttribute("src");
-    frame.style.display = "none";
-    status.hidden = true;
-    image.alt = thumbnail?.alt || "Certificate preview";
-    image.style.display = "block";
-    image.onerror = () => {
+    const isImage = /\.(png|jpe?g|webp|gif|svg)(?:[?#].*)?$/i.test(pdfUrl);
+    if (isImage) {
+      frame.src = "";
+      frame.style.display = "none";
+      image.src = pdfUrl;
+      image.style.display = "block";
+    } else {
+      image.src = "";
       image.style.display = "none";
-      status.textContent = "This certificate image is unavailable. Please try again later.";
-      status.hidden = false;
-    };
-    image.src = imageUrl;
+      // Open every PDF in a page-fit view so the complete certificate is visible
+      // without horizontal or vertical scrolling inside the popup.
+      const separator = pdfUrl.includes("#") ? "&" : "#";
+      frame.src = `${pdfUrl}${separator}view=Fit&zoom=page-fit`;
+      frame.style.display = "block";
+    }
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -62,11 +61,9 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   function closeCertificateModal() {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
-    image.onerror = null;
-    frame.removeAttribute("src");
-    image.removeAttribute("src");
-    status.hidden = true;
-    frame.style.display = "none";
+    frame.src = "";
+    image.src = "";
+    frame.style.display = "block";
     image.style.display = "none";
     document.body.style.overflow = "";
     lastFocusedElement?.focus();
