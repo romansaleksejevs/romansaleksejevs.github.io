@@ -33,18 +33,22 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   let lastFocusedElement = null;
 
   function openCertificateModal(card) {
-    const pdfUrl = card.getAttribute("href");
+    // Preview the exact image shown on this card. The separate PDF linked by
+    // href may not be deployed; never guess a certificate filename from it.
+    const thumbnail = card.querySelector("img");
+    const pdfUrl = thumbnail?.getAttribute("src") || card.getAttribute("href");
     if (!pdfUrl) return;
 
     lastFocusedElement = document.activeElement;
+    image.alt = thumbnail?.alt || card.getAttribute("aria-label") || "Certificate preview";
     const isImage = /\.(png|jpe?g|webp|gif|svg)(?:[?#].*)?$/i.test(pdfUrl);
     if (isImage) {
-      frame.src = "";
+      frame.removeAttribute("src");
       frame.style.display = "none";
       image.src = pdfUrl;
       image.style.display = "block";
     } else {
-      image.src = "";
+      image.removeAttribute("src");
       image.style.display = "none";
       // Open every PDF in a page-fit view so the complete certificate is visible
       // without horizontal or vertical scrolling inside the popup.
@@ -61,8 +65,8 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   function closeCertificateModal() {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
-    frame.src = "";
-    image.src = "";
+    frame.removeAttribute("src");
+    image.removeAttribute("src");
     frame.style.display = "block";
     image.style.display = "none";
     document.body.style.overflow = "";
